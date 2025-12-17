@@ -345,6 +345,33 @@ table tr:hover {
   border-radius: 8px;
   border-left: 4px solid var(--secondary-color);
 }
+.global-sidebar {
+  background-color: var(--light-bg);
+  padding: 1.25em;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.global-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1em 0;
+}
+
+.global-nav li { margin: 0.25em 0; }
+.global-nav a {
+  display: block;
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+  color: var(--primary-color);
+}
+.global-nav a:hover {
+  background-color: rgba(52, 152, 219, 0.12);
+  text-decoration: none;
+}
+
+.sidebar-section { margin-top: 1em; }
+.module-list { padding-left: 1.25em; }
 
 .sidebar h3 {
   margin-top: 0;

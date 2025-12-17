@@ -1,0 +1,46 @@
+<aside class="global-sidebar">
+  <nav class="global-nav">
+    <ul>
+      <li><a href="{{ site.baseurl }}/">🏠 Home</a></li>
+      <li><a href="{{ site.baseurl }}/courses/">📚 Courses</a></li>
+      <li><a href="{{ site.baseurl }}/resources/">🔗 Resources</a></li>
+      <li><a href="{{ site.baseurl }}/about/">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  {% if page.collection == 'courses' or page.collection == 'dnn' %}
+  <div class="sidebar-section">
+    <h3>📖 Course Info</h3>
+    {% if page.title %}<p><strong>Course:</strong> {{ page.title }}</p>{% endif %}
+    {% if page.credits %}<p><strong>Credits:</strong> {{ page.credits }}</p>{% endif %}
+    {% if page.instructor %}<p><strong>Instructor:</strong> {{ page.instructor }}</p>{% endif %}
+    {% if page.level %}<p><strong>Level:</strong> {{ page.level }}</p>{% endif %}
+  </div>
+
+  {% if page.topics %}
+  <div class="sidebar-section">
+    <h3>📊 Topics</h3>
+    <ul>
+      {% for topic in page.topics %}
+      <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% assign modules = site.dnn | where: "course", "dnn" | sort: "order" %}
+  {% if page.slug == '03-deep-learning' or page.course == 'dnn' %}
+  <div class="sidebar-section">
+    <h3>🧠 DNN Modules</h3>
+    <ol class="module-list">
+      {% for m in modules %}
+      <li><a href="{{ site.baseurl }}{{ m.url }}">{{ m.module_title }}</a></li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endif %}
+
+  {% if page.github_repo %}
+  <p style="margin-top: 1.5em;"><a href="{{ page.github_repo }}" class="btn" style="width: 100%; text-align: center; display: block;">🐙 GitHub Repository</a></p>
+  {% endif %}
+</aside>
