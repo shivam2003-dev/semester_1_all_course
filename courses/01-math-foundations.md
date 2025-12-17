@@ -13,6 +13,8 @@ topics:
   - Probability Theory
   - Statistical Methods
   - Optimization
+  - Principal Component Analysis (PCA)
+  - SVM Optimization (Primal/Dual)
 github_repo: "https://github.com/shivam2003-dev/semester_1_all_course"
 ---
 
@@ -201,6 +203,83 @@ where α is the learning rate and ∇J is the gradient
 
 ---
 
+### Module 6: Dimensionality Reduction & PCA
+
+#### Key Topics:
+- **Variance Maximization**: Projecting data to directions of maximum variance
+- **Covariance Matrix & Eigen Decomposition**: Link to principal components
+- **Explained Variance Ratio**: Selecting number of components
+- **Whitening & Reconstruction**: Transformations and inverse mapping
+
+**Core Equations:**
+```
+Given centered data matrix X ∈ ℝ^{n×d}
+
+Covariance: Σ = (1/n) XᵀX
+
+Eigen Decomposition: Σ vᵢ = λᵢ vᵢ
+Principal Components: columns of V = [v₁, v₂, ..., v_d]
+Project to k components: Z = X V_k  (V_k: top-k eigenvectors)
+
+Explained Variance Ratio (EVR):
+EVR_k = (Σ_{i=1..k} λᵢ) / (Σ_{i=1..d} λᵢ)
+```
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Choosing k</h4>
+  <p>Plot the scree curve (eigenvalues) and pick k at the elbow. Alternatively, choose the smallest k with EVR ≥ 0.95 for strong compression.</p>
+</div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: PCA for Pipelines</h4>
+  <p>Use PCA to reduce dimensionality before clustering or regression to stabilize models and speed up training. Standardize features before PCA.</p>
+</div>
+
+---
+
+### Module 7: Optimization for Support Vector Machines (SVM)
+
+#### Key Topics:
+- **Primal Formulation**: Margin maximization with hinge loss
+- **Dual Formulation**: Lagrange multipliers and kernels
+- **KKT Conditions**: Complementary slackness and optimality
+- **Kernel Trick**: Implicit feature mapping via kernels
+
+**Primal (Soft-Margin) SVM:**
+```
+Given training set {(xᵢ, yᵢ)} with yᵢ ∈ {−1, +1}
+
+min_{w,b,ξ}  (1/2)‖w‖² + C Σ ξᵢ
+subject to: yᵢ (wᵀ xᵢ + b) ≥ 1 − ξᵢ,  ξᵢ ≥ 0
+```
+
+**Dual Form:**
+```
+max_α  Σ αᵢ − (1/2) ΣΣ αᵢ αⱼ yᵢ yⱼ K(xᵢ, xⱼ)
+subject to: 0 ≤ αᵢ ≤ C,  Σ αᵢ yᵢ = 0
+
+Decision function: f(x) = sign(Σ αᵢ yᵢ K(xᵢ, x) + b)
+```
+
+**KKT Conditions (at optimum):**
+```
+αᵢ ≥ 0, ξᵢ ≥ 0
+αᵢ [ yᵢ (wᵀ xᵢ + b) − 1 + ξᵢ ] = 0
+μᵢ ξᵢ = 0,  μᵢ ≥ 0  (for slack constraints)
+```
+
+<div class="alert alert-info">
+  <h4>ℹ️ Important: Support Vectors</h4>
+  <p>Only points with αᵢ > 0 contribute to the decision boundary. These are the support vectors; removing non-support vectors doesn’t change the classifier.</p>
+</div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Feature Scaling</h4>
+  <p>SVMs are sensitive to feature scales. Always standardize features before training to avoid dominance of high-variance features.</p>
+</div>
+
+---
+
 ## 🎯 Learning Outcomes
 
 By the end of this course, you should be able to:
@@ -210,6 +289,8 @@ By the end of this course, you should be able to:
 - ✅ Calculate probabilities and apply Bayes' theorem
 - ✅ Interpret statistical results and hypothesis tests
 - ✅ Implement gradient descent optimization
+- ✅ Perform PCA and reason about explained variance
+- ✅ Derive SVM primal/dual and apply KKT conditions
 
 ---
 
