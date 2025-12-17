@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning Fundamentals - AIML Course Hub</title>
+  <meta name="description" content="Master the fundamental concepts and algorithms of Machine Learning">
+  <link rel="stylesheet" href="/semester_1_all_course/assets/css/style.css">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>📚</text></svg>">
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">📚 AIML Course Hub</div>
+    <div class="site-description">Comprehensive AI/ML Course Website with Notes, Resources & Industry Tips</div>
+  </div>
+</header>
+
+  
+  <main class="content-wrapper">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 2em; align-items: start;">
+        <aside class="global-sidebar">
+  <nav class="global-nav">
+    <ul>
+      <li><a href="/semester_1_all_course/">🏠 Home</a></li>
+      <li><a href="/semester_1_all_course/courses/">📚 Courses</a></li>
+      <li><a href="/semester_1_all_course/resources/">🔗 Resources</a></li>
+      <li><a href="/semester_1_all_course/about/">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  
+  
+
+  
+  <div class="sidebar-section">
+    <h3>📖 Course Info</h3>
+    <p><strong>Course:</strong> Machine Learning Fundamentals</p>
+    <p><strong>Credits:</strong> 4</p>
+    <p><strong>Instructor:</strong> Faculty</p>
+    <p><strong>Level:</strong> Intermediate</p>
+  </div>
+
+  
+  <div class="sidebar-section">
+    <h3>📊 Topics</h3>
+    <ul>
+      
+      <li>Supervised Learning</li>
+      
+      <li>Unsupervised Learning</li>
+      
+      <li>Model Evaluation</li>
+      
+      <li>Feature Engineering</li>
+      
+      <li>Hyperparameter Tuning</li>
+      
+      <li>Ensemble Methods</li>
+      
+    </ul>
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  <p style="margin-top: 1.5em;"><a href="https://github.com/shivam2003-dev/semester_1_all_course" class="btn" style="width: 100%; text-align: center; display: block;">🐙 GitHub Repository</a></p>
+  
+  
+</aside>
+
+        <div>
+          <article class="course-detail">
+  <div class="breadcrumb">
+    <li><a href="/semester_1_all_course/">Home</a></li>
+    <li><a href="/semester_1_all_course/courses/">Courses</a></li>
+    <li>Machine Learning Fundamentals</li>
+  </div>
+
+  <div class="course-header" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 2em; border-radius: 8px; margin-bottom: 2em;">
+    <h1 style="color: white; border: none; padding-bottom: 0; margin-bottom: 0.5em;">Machine Learning Fundamentals</h1>
+    <p style="margin: 0; opacity: 0.9; font-size: 1.1em;">Master the fundamental concepts and algorithms of Machine Learning</p>
+  </div>
+
+  <h2 id="-course-overview">📝 Course Overview</h2>
+
+<p>This course covers the fundamental concepts of machine learning, from basic supervised learning algorithms to advanced techniques like ensemble methods. You’ll learn how to build, train, and evaluate ML models.</p>
+
+<hr />
+
+<h2 id="-course-content">📚 Course Content</h2>
+
+<h3 id="module-1-supervised-learning---regression">Module 1: Supervised Learning - Regression</h3>
+
+<h4 id="key-topics">Key Topics:</h4>
+<ul>
+  <li><strong>Linear Regression</strong>: Foundation of supervised learning</li>
+  <li><strong>Multiple Linear Regression</strong>: Handling multiple features</li>
+  <li><strong>Polynomial Regression</strong>: Non-linear relationships</li>
+  <li><strong>Regularization</strong>: L1 (Lasso) and L2 (Ridge)</li>
+  <li><strong>Evaluation Metrics</strong>: MSE, RMSE, R² Score</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Linear Regression Foundation</h4>
+  <p>Linear regression is often the first ML algorithm learned. Despite its simplicity, it's powerful for understanding core ML concepts like loss functions, optimization, and evaluation.</p>
+</div>
+
+<p><strong>Key Equations:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Linear Regression:
+ŷ = w₀ + w₁x₁ + w₂x₂ + ... + wₙxₙ
+
+Loss Function (Mean Squared Error):
+MSE = (1/n) Σ(yᵢ - ŷᵢ)²
+
+R² Score:
+R² = 1 - (SS_res / SS_tot) where 0 ≤ R² ≤ 1
+
+L2 Regularization (Ridge):
+Loss = MSE + λ × Σ wᵢ²
+
+L1 Regularization (Lasso):
+Loss = MSE + λ × Σ |wᵢ|
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Multicollinearity</h4>
+  <p>When features are highly correlated, regression models become unstable. Use regularization or feature selection to handle multicollinearity.</p>
+</div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Feature Scaling</h4>
+  <p>Always normalize or standardize features before applying regression, especially when using regularization. Features on different scales can bias the model towards features with larger values.</p>
+</div>
+
+<hr />
+
+<h3 id="module-2-supervised-learning---classification">Module 2: Supervised Learning - Classification</h3>
+
+<h4 id="key-topics-1">Key Topics:</h4>
+<ul>
+  <li><strong>Logistic Regression</strong>: Binary classification</li>
+  <li><strong>Multi-class Classification</strong>: One-vs-Rest, Softmax</li>
+  <li><strong>Decision Trees</strong>: Interpretable models</li>
+  <li><strong>Support Vector Machines (SVM)</strong>: Maximum margin classifiers</li>
+  <li><strong>Naive Bayes</strong>: Probabilistic classifier</li>
+  <li><strong>K-Nearest Neighbors (KNN)</strong>: Instance-based learning</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Classification vs Regression</h4>
+  <p>Classification predicts discrete categories while regression predicts continuous values. Despite similar algorithms (like logistic regression), they solve different problem types.</p>
+</div>
+
+<p><strong>Key Concepts:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Logistic Function (Sigmoid):
+σ(z) = 1 / (1 + e^(-z))
+
+Cross-Entropy Loss:
+Loss = -[y × log(ŷ) + (1-y) × log(1-ŷ)]
+
+SVM Decision Boundary:
+min ||w||² + C × Σ ξᵢ
+
+KNN Prediction:
+ŷ = majority class among k nearest neighbors
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Decision Boundary</h4>
+  <p>Linear classifiers like logistic regression can only learn linear decision boundaries. Non-linear problems require non-linear models like trees, SVMs with kernel tricks, or neural networks.</p>
+</div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Confusion Matrix</h4>
+  <p>Memorize the confusion matrix! Know how to calculate precision, recall, F1-score, and accuracy. These are tested frequently and are crucial for model evaluation.</p>
+</div>
+
+<p><strong>Confusion Matrix Metrics:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Accuracy = (TP + TN) / (TP + TN + FP + FN)
+Precision = TP / (TP + FP)  [How many predicted positives are correct?]
+Recall = TP / (TP + FN)     [How many actual positives are found?]
+F1 = 2 × (Precision × Recall) / (Precision + Recall)
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="module-3-unsupervised-learning">Module 3: Unsupervised Learning</h3>
+
+<h4 id="key-topics-2">Key Topics:</h4>
+<ul>
+  <li><strong>Clustering</strong>: K-Means, Hierarchical Clustering</li>
+  <li><strong>Dimensionality Reduction</strong>: PCA, t-SNE</li>
+  <li><strong>Anomaly Detection</strong>: Isolation Forest, LOF</li>
+  <li><strong>Association Rules</strong>: Market basket analysis</li>
+  <li><strong>Density Estimation</strong>: Gaussian Mixture Models</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Unsupervised Learning Challenges</h4>
+  <p>Without labels, it's hard to evaluate unsupervised models. Common approaches include silhouette score, Davies-Bouldin index, and domain expert validation.</p>
+</div>
+
+<p><strong>Key Algorithms:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>K-Means Objective:
+min Σ Σ ||xᵢ - μₖ||²
+
+PCA (Principal Component Analysis):
+- Find directions of maximum variance
+- Reduces dimensionality while preserving information
+
+Gaussian Mixture Model:
+p(x) = Σ πₖ × N(x|μₖ, Σₖ)
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: K-Means Limitations</h4>
+  <p>K-Means struggles with non-convex clusters and requires knowing k in advance. Consider alternatives like DBSCAN for more complex cluster shapes.</p>
+</div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Feature Reduction</h4>
+  <p>In production, PCA and other dimensionality reduction techniques help with: (1) reducing storage, (2) speeding up models, (3) removing noise, and (4) enabling visualization.</p>
+</div>
+
+<hr />
+
+<h3 id="module-4-model-evaluation--selection">Module 4: Model Evaluation &amp; Selection</h3>
+
+<h4 id="key-topics-3">Key Topics:</h4>
+<ul>
+  <li><strong>Train/Test Split</strong>: Avoiding overfitting</li>
+  <li><strong>Cross-Validation</strong>: k-fold, stratified</li>
+  <li><strong>Overfitting vs Underfitting</strong>: Bias-variance tradeoff</li>
+  <li><strong>ROC Curves and AUC</strong>: Classification evaluation</li>
+  <li><strong>Learning Curves</strong>: Diagnosing model performance</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: The Bias-Variance Tradeoff</h4>
+  <p>Bias is underfitting (model too simple), variance is overfitting (model too complex). The goal is to find the sweet spot. Use regularization and cross-validation to manage this.</p>
+</div>
+
+<p><strong>Evaluation Techniques:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cross-Validation Principle:
+Split data into k folds, train on k-1 folds, test on 1
+
+Learning Curve Interpretation:
+- High bias: high train error = underfitting (get more complex model)
+- High variance: gap between train and test = overfitting (get more data or regularize)
+
+ROC-AUC:
+- ROC plots True Positive Rate vs False Positive Rate
+- AUC = Area Under Curve (higher is better, 1.0 is perfect, 0.5 is random)
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Model Selection</h4>
+  <p>Know when to use which technique: Use cross-validation for small datasets, use hold-out test set for large datasets. Always stratify in classification to maintain class distribution.</p>
+</div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Data Leakage</h4>
+  <p>Never fit preprocessing (scaling, encoding) on the entire dataset before splitting. Always fit on training data only, then apply to test data. Data leakage inflates performance estimates.</p>
+</div>
+
+<hr />
+
+<h3 id="module-5-feature-engineering">Module 5: Feature Engineering</h3>
+
+<h4 id="key-topics-4">Key Topics:</h4>
+<ul>
+  <li><strong>Feature Selection</strong>: Choosing relevant features</li>
+  <li><strong>Feature Extraction</strong>: Creating new features</li>
+  <li><strong>Encoding</strong>: Categorical to numerical</li>
+  <li><strong>Scaling/Normalization</strong>: Standardizing features</li>
+  <li><strong>Handling Missing Data</strong>: Imputation strategies</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Feature Engineering is Critical</h4>
+  <p>70% of machine learning success comes from good features. A simple model with great features often outperforms complex models with poor features.</p>
+</div>
+
+<p><strong>Key Techniques:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Feature Selection Methods:
+1. Filter methods: correlation, chi-square, mutual information
+2. Wrapper methods: recursive feature elimination, forward selection
+3. Embedded methods: L1/L2 regularization, tree importance
+
+Feature Scaling:
+- Standardization: (x - μ) / σ (zero mean, unit variance)
+- Min-Max Scaling: (x - min) / (max - min) (0 to 1 range)
+
+Missing Data Imputation:
+- Mean/Median/Mode imputation
+- Forward/Backward fill (time series)
+- K-NN imputation
+- Model-based imputation
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Feature Leakage</h4>
+  <p>Don't use future information when training. For example, don't use the target variable's statistics to engineer features, or future data points in time series.</p>
+</div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Domain Knowledge</h4>
+  <p>The best features often come from domain expertise. Work with subject matter experts to create features that capture domain-specific insights. This often beats automated feature selection.</p>
+</div>
+
+<hr />
+
+<h3 id="module-6-ensemble-methods">Module 6: Ensemble Methods</h3>
+
+<h4 id="key-topics-5">Key Topics:</h4>
+<ul>
+  <li><strong>Bagging</strong>: Bootstrap Aggregating</li>
+  <li><strong>Boosting</strong>: Gradient Boosting, AdaBoost, XGBoost</li>
+  <li><strong>Stacking</strong>: Combining multiple models</li>
+  <li><strong>Random Forests</strong>: Ensemble of trees</li>
+  <li><strong>Voting Classifiers</strong>: Hard and soft voting</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Ensemble Power</h4>
+  <p>Ensembles combine multiple models to reduce overfitting and improve generalization. The key is diversity: each model should make different errors.</p>
+</div>
+
+<p><strong>Key Ensemble Methods:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bagging:
+- Train multiple models on random subsets (with replacement)
+- Average predictions (regression) or vote (classification)
+
+Boosting:
+- Train models sequentially, each correcting previous mistakes
+- Assign higher weights to misclassified samples
+- Final prediction = weighted sum of all models
+
+Random Forest:
+- Bagging + feature randomness
+- Each tree uses random subset of features
+- More diversity = better generalization
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Ensemble Advantages</h4>
+  <p>Know the advantages: reduced variance (bagging), reduced bias (boosting), robustness, and strong generalization. Understand why ensembles work better than single models.</p>
+</div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Computational Cost</h4>
+  <p>Ensembles are slower to train and predict than single models. In production, consider this tradeoff. Sometimes a simpler model is better if performance difference is minimal.</p>
+</div>
+
+<hr />
+
+<h2 id="-learning-outcomes">🎯 Learning Outcomes</h2>
+
+<p>By the end of this course, you should be able to:</p>
+
+<ul>
+  <li>✅ Implement and evaluate regression and classification models</li>
+  <li>✅ Choose appropriate evaluation metrics for different problem types</li>
+  <li>✅ Apply cross-validation and diagnose model performance</li>
+  <li>✅ Engineer and select relevant features</li>
+  <li>✅ Build ensemble models and understand their advantages</li>
+  <li>✅ Recognize and avoid overfitting, underfitting, and data leakage</li>
+</ul>
+
+<hr />
+
+<h2 id="-exam-tips">⚡ Exam Tips</h2>
+
+<div class="card">
+  <h4>🎓 Key Concepts to Master</h4>
+  <ul>
+    <li><strong>Confusion Matrix</strong>: Precision, Recall, F1-Score</li>
+    <li><strong>Bias-Variance Tradeoff</strong>: What causes overfitting/underfitting?</li>
+    <li><strong>Model Selection</strong>: When to use which algorithm?</li>
+    <li><strong>Cross-Validation</strong>: Why and how to use it</li>
+    <li><strong>Regularization</strong>: L1 vs L2 and when to use each</li>
+    <li><strong>Feature Engineering</strong>: How to improve models</li>
+  </ul>
+</div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Common Exam Mistakes</h4>
+  <ul>
+    <li>Confusing precision and recall</li>
+    <li>Not checking for data leakage before evaluation</li>
+    <li>Forgetting to normalize features before scaling-sensitive algorithms</li>
+    <li>Not stratifying splits in imbalanced classification</li>
+    <li>Overfitting to the test set by trying too many models</li>
+  </ul>
+</div>
+
+<hr />
+
+<h2 id="-industry-applications">💼 Industry Applications</h2>
+
+<h3 id="e-commerce">E-Commerce</h3>
+<p>Classification models predict customer churn. Regression models forecast sales and demand.</p>
+
+<h3 id="healthcare">Healthcare</h3>
+<p>Classification models diagnose diseases. Ensemble methods combine multiple diagnostic signals.</p>
+
+<h3 id="finance">Finance</h3>
+<p>Fraud detection uses classification and anomaly detection. Lending decisions use ensemble models.</p>
+
+<h3 id="recommendation-systems">Recommendation Systems</h3>
+<p>Clustering and similarity metrics group users and items. Ensemble methods combine multiple recommendation signals.</p>
+
+<hr />
+
+<h2 id="-external-resources">🔗 External Resources</h2>
+
+<h3 id="online-courses">Online Courses</h3>
+<ul>
+  <li><a href="https://www.coursera.org/learn/machine-learning">Andrew Ng’s Machine Learning Course</a></li>
+  <li><a href="https://www.kaggle.com/learn/machine-learning">Kaggle Learn - Machine Learning</a></li>
+  <li><a href="https://course.fast.ai/">Fast.ai - Practical Deep Learning</a></li>
+</ul>
+
+<h3 id="libraries--tools">Libraries &amp; Tools</h3>
+<ul>
+  <li><strong>Scikit-learn</strong>: Classical ML in Python</li>
+  <li><strong>XGBoost</strong>: Gradient boosting library</li>
+  <li><strong>LightGBM</strong>: Fast gradient boosting</li>
+  <li><strong>CatBoost</strong>: Handles categorical features well</li>
+</ul>
+
+<h3 id="important-papers">Important Papers</h3>
+<ul>
+  <li><a href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">Random Forests - Leo Breiman</a></li>
+  <li><a href="https://statweb.stanford.edu/~jhf/ftp/trebst.pdf">Gradient Boosting Machines - Friedman</a></li>
+</ul>
+
+<h3 id="cheatsheets">Cheatsheets</h3>
+<ul>
+  <li><a href="https://scikit-learn.org/">Scikit-learn Cheatsheet</a></li>
+  <li><a href="https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html">Algorithm Selection Flowchart</a></li>
+</ul>
+
+<hr />
+
+<h2 id="-quick-algorithm-selection-guide">📋 Quick Algorithm Selection Guide</h2>
+
+<p><strong>When to use:</strong></p>
+<ul>
+  <li><strong>Linear Regression</strong>: Continuous predictions, interpretability needed</li>
+  <li><strong>Logistic Regression</strong>: Binary classification, interpretability needed</li>
+  <li><strong>Decision Trees</strong>: Non-linear relationships, interpretability</li>
+  <li><strong>Random Forest</strong>: High accuracy needed, moderate interpretability</li>
+  <li><strong>SVM</strong>: Small-medium datasets, high-dimensional data</li>
+  <li><strong>KNN</strong>: Small datasets, can capture local patterns</li>
+  <li><strong>Naive Bayes</strong>: Text classification, fast training needed</li>
+  <li><strong>K-Means</strong>: Clustering unknown data</li>
+  <li><strong>PCA</strong>: Reduce dimensionality, visualization</li>
+</ul>
+
+<hr />
+
+<h2 id="-need-help">📞 Need Help?</h2>
+
+<ul>
+  <li>Practice with Kaggle datasets and competitions</li>
+  <li>Review scikit-learn documentation with examples</li>
+  <li>Check the <a href="/semester_1_all_course/resources/">Resources page</a> for more materials</li>
+</ul>
+
+<p><strong>Last Updated</strong>: December 2025</p>
+
+</article>
+
+<style>
+  @media (max-width: 768px) {
+    .global-sidebar { display: none; }
+    .container > div { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  <div class="container">
+    <div>
+      <h3>📚 About This Site</h3>
+      <p>A comprehensive course platform designed for AI/ML students featuring detailed notes, exam tips, industry insights, and curated resources.</p>
+    </div>
+    <div>
+      <h3>📖 Quick Links</h3>
+      <ul>
+        <li><a href="/semester_1_all_course/">Home</a></li>
+        <li><a href="/semester_1_all_course/courses/">Courses</a></li>
+        <li><a href="/semester_1_all_course/resources/">Resources</a></li>
+        <li><a href="/semester_1_all_course/about/">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>🔗 External Resources</h3>
+      <ul>
+        <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+        <li><a href="https://www.edx.org/" target="_blank">edX</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><a href="https://arxiv.org/" target="_blank">arXiv</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>💡 Repository</h3>
+      <p><a href="https://github.com/shivam2003-dev/semester_1_all_course" target="_blank">View on GitHub</a></p>
+      <p style="margin-top: 1em;"><a href="https://github.com/shivam2003-dev" target="_blank">@shivam2003-dev</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AIML Course Hub. All rights reserved. | Built with Jekyll & GitHub Pages</p>
+  </div>
+</footer>
+
+</body>
+</html>

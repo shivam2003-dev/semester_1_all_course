@@ -1,0 +1,135 @@
+
+
+## Deep Neural Networks – Syllabus Overview
+
+### 1. Foundations of Deep Learning
+
+* What deep learning is, why it works, and where it’s used
+* Supervised learning and motivating real-world examples
+* Core components: data, models, loss functions, optimization
+
+
+
+---
+
+### 2. Artificial Neuron and Perceptron
+
+* Biological vs artificial neuron
+* Perceptron model and learning algorithm
+* Logic gates (AND, OR, NOT)
+* Limitations: XOR problem and linear separability
+
+
+
+---
+
+### 3. Linear Neural Networks
+
+**Regression**
+
+* Single-neuron linear models
+* Squared loss and mini-batch SGD
+
+**Classification**
+
+* Binary classification with sigmoid + cross-entropy
+* Multi-class classification with softmax
+* From-scratch implementations
+
+
+
+---
+
+### 4. Deep Feedforward Neural Networks (MLP)
+
+* Hidden layers and non-linearity
+* Forward propagation
+* Backpropagation and gradient computation
+* Effect of depth and width on performance
+
+
+
+---
+
+### 5. Convolutional Neural Networks (CNNs)
+
+* Image data, locality, invariance, channels
+* Convolution, padding, stride, pooling
+* Feature maps and receptive fields
+* LeNet architecture
+* Deep CNNs: AlexNet, VGG, Inception, ResNet
+* Transfer learning and fine-tuning
+
+
+
+---
+
+### 6. Recurrent Neural Networks (RNNs)
+
+* Sequence modeling and hidden states
+* Backpropagation Through Time (BPTT)
+* Encoder–decoder architecture
+* LSTM, GRU, BiLSTM
+* Applications in NLP and time series
+
+
+
+---
+
+### 7. Attention Mechanisms
+
+* Queries, keys, values
+* Dot-product and additive attention
+* Self-attention and multi-head attention
+* Positional encoding
+
+
+
+---
+
+### 8. Transformers
+
+* Transformer architecture
+* Encoder, decoder, and transformer blocks
+* Residual connections and layer normalization
+* Encoder-only, decoder-only, encoder–decoder models
+* Vision Transformers (ViT) and large-scale pretraining
+
+
+
+---
+
+### 9. Optimization of Deep Models
+
+* Optimization challenges in deep learning
+* Gradient Descent variants
+* Momentum, Adagrad, RMSProp
+* Adam and related algorithms
+* From-scratch implementation and comparison
+
+
+
+---
+
+### 10. Regularization and Generalization
+
+* Overfitting vs underfitting
+* Training vs generalization error
+* Weight decay and norm penalties
+* Dropout
+* Batch normalization and layer normalization
+* Distribution shift and robustness
+
+
+
+---
+
+### 11. Hands-On & Experiential Learning
+
+* Python-based labs using NumPy, PyTorch, TensorFlow
+* Implementations from scratch and with frameworks
+* CNNs, RNNs, Transformers, optimization, regularization
+
+
+
+

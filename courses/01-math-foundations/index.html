@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Foundations for AI/ML - AIML Course Hub</title>
+  <meta name="description" content="Master the mathematical fundamentals required for AI and Machine Learning">
+  <link rel="stylesheet" href="/semester_1_all_course/assets/css/style.css">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>📚</text></svg>">
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">📚 AIML Course Hub</div>
+    <div class="site-description">Comprehensive AI/ML Course Website with Notes, Resources & Industry Tips</div>
+  </div>
+</header>
+
+  
+  <main class="content-wrapper">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 2em; align-items: start;">
+        <aside class="global-sidebar">
+  <nav class="global-nav">
+    <ul>
+      <li><a href="/semester_1_all_course/">🏠 Home</a></li>
+      <li><a href="/semester_1_all_course/courses/">📚 Courses</a></li>
+      <li><a href="/semester_1_all_course/resources/">🔗 Resources</a></li>
+      <li><a href="/semester_1_all_course/about/">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  
+  
+
+  
+  <div class="sidebar-section">
+    <h3>📖 Course Info</h3>
+    <p><strong>Course:</strong> Math Foundations for AI/ML</p>
+    <p><strong>Credits:</strong> 4</p>
+    <p><strong>Instructor:</strong> Faculty</p>
+    <p><strong>Level:</strong> Beginner to Intermediate</p>
+  </div>
+
+  
+  <div class="sidebar-section">
+    <h3>📊 Topics</h3>
+    <ul>
+      
+      <li>Linear Algebra Basics</li>
+      
+      <li>Vectors and Matrices</li>
+      
+      <li>Calculus Fundamentals</li>
+      
+      <li>Probability Theory</li>
+      
+      <li>Statistical Methods</li>
+      
+      <li>Optimization</li>
+      
+      <li>Principal Component Analysis (PCA)</li>
+      
+      <li>SVM Optimization (Primal/Dual)</li>
+      
+    </ul>
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  <p style="margin-top: 1.5em;"><a href="https://github.com/shivam2003-dev/semester_1_all_course" class="btn" style="width: 100%; text-align: center; display: block;">🐙 GitHub Repository</a></p>
+  
+  
+</aside>
+
+        <div>
+          <article class="course-detail">
+  <div class="breadcrumb">
+    <li><a href="/semester_1_all_course/">Home</a></li>
+    <li><a href="/semester_1_all_course/courses/">Courses</a></li>
+    <li>Math Foundations for AI/ML</li>
+  </div>
+
+  <div class="course-header" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 2em; border-radius: 8px; margin-bottom: 2em;">
+    <h1 style="color: white; border: none; padding-bottom: 0; margin-bottom: 0.5em;">Math Foundations for AI/ML</h1>
+    <p style="margin: 0; opacity: 0.9; font-size: 1.1em;">Master the mathematical fundamentals required for AI and Machine Learning</p>
+  </div>
+
+  <h2 id="-course-overview">📝 Course Overview</h2>
+
+<p>This course provides the mathematical foundation necessary for understanding machine learning algorithms and AI concepts. Whether you’re new to mathematics or need a refresher, this course builds your skills systematically.</p>
+
+<hr />
+
+<h2 id="-course-content">📚 Course Content</h2>
+
+<h3 id="module-1-linear-algebra-basics">Module 1: Linear Algebra Basics</h3>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Linear Algebra is Crucial</h4>
+  <p>Linear algebra is the backbone of machine learning. Understanding vectors, matrices, and their operations is essential for grasping how neural networks and most ML algorithms work.</p>
+</div>
+
+<h4 id="key-topics">Key Topics:</h4>
+<ul>
+  <li><strong>Vectors and Vector Spaces</strong>: Understanding n-dimensional spaces</li>
+  <li><strong>Matrices</strong>: Operations, inverse, determinant</li>
+  <li><strong>Eigenvalues and Eigenvectors</strong>: Critical for PCA and other techniques</li>
+  <li><strong>Matrix Decomposition</strong>: LU, QR, SVD decompositions</li>
+</ul>
+
+<h4 id="important-concepts">Important Concepts:</h4>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Matrix Dimensions</h4>
+  <p>Always check matrix dimensions before operations. For matrix multiplication A×B, the number of columns in A must equal the number of rows in B. This is a common source of errors!</p>
+</div>
+
+<p><strong>Key Formulas:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Matrix Multiplication (A: m×n, B: n×p → C: m×p)
+C[i,j] = Σ A[i,k] × B[k,j]
+
+Eigenvalue Equation:
+Av = λv (where v is eigenvector, λ is eigenvalue)
+
+Determinant (2×2):
+|A| = ad - bc for matrix [[a,b],[c,d]]
+</code></pre></div></div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: GPU Computing</h4>
+  <p>In industry, linear algebra operations are heavily optimized on GPUs. Libraries like CUDA and cuBLAS can make calculations 100x faster. Learn PyTorch or TensorFlow for practical implementation.</p>
+</div>
+
+<hr />
+
+<h3 id="module-2-calculus-fundamentals">Module 2: Calculus Fundamentals</h3>
+
+<h4 id="key-topics-1">Key Topics:</h4>
+<ul>
+  <li><strong>Derivatives</strong>: Understanding rates of change</li>
+  <li><strong>Partial Derivatives</strong>: Multivariable calculus</li>
+  <li><strong>Chain Rule</strong>: Essential for backpropagation</li>
+  <li><strong>Gradient Descent</strong>: Optimization algorithm</li>
+  <li><strong>Integration</strong>: Area under curves, probability</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Calculus and Neural Networks</h4>
+  <p>The chain rule in calculus is the foundation of backpropagation in neural networks. Understanding how derivatives compose is critical for deep learning.</p>
+</div>
+
+<p><strong>Essential Derivatives:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>d/dx(x^n) = n×x^(n-1)
+d/dx(e^x) = e^x
+d/dx(ln(x)) = 1/x
+d/dx(sin(x)) = cos(x)
+
+Chain Rule:
+d/dx[f(g(x))] = f'(g(x)) × g'(x)
+
+Gradient Vector:
+∇f = [∂f/∂x₁, ∂f/∂x₂, ..., ∂f/∂xₙ]
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Chain Rule</h4>
+  <p>Students often forget to multiply by the derivative of the inner function. Always apply the chain rule correctly in nested functions.</p>
+</div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Gradient Descent</h4>
+  <p>Exam questions often ask about gradient descent convergence. Remember: learning rate matters! Too high = divergence, too low = slow convergence. Be able to explain this with an example.</p>
+</div>
+
+<hr />
+
+<h3 id="module-3-probability-theory">Module 3: Probability Theory</h3>
+
+<h4 id="key-topics-2">Key Topics:</h4>
+<ul>
+  <li><strong>Probability Basics</strong>: Sample spaces, events</li>
+  <li><strong>Conditional Probability</strong>: Bayes’ theorem</li>
+  <li><strong>Random Variables</strong>: Discrete and continuous</li>
+  <li><strong>Probability Distributions</strong>: Normal, Binomial, Poisson</li>
+  <li><strong>Expectation and Variance</strong>: Statistical measures</li>
+</ul>
+
+<div class="alert alert-info">
+  <h4>ℹ️ Important: Bayes' Theorem</h4>
+  <p>Bayes' theorem is fundamental to many ML algorithms. It describes the relationship between conditional probabilities and is the basis for Bayesian inference.</p>
+</div>
+
+<p><strong>Key Formulas:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Probability: P(A) = Number of favorable outcomes / Total outcomes
+
+Bayes' Theorem:
+P(A|B) = P(B|A) × P(A) / P(B)
+
+Expectation: E[X] = Σ x × P(x)
+
+Variance: Var(X) = E[X²] - (E[X])²
+
+Normal Distribution:
+f(x) = (1/(σ√(2π))) × e^(-(x-μ)²/(2σ²))
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Independence Assumption</h4>
+  <p>Many algorithms assume feature independence, which is rarely true in practice. This can lead to suboptimal model performance if ignored.</p>
+</div>
+
+<hr />
+
+<h3 id="module-4-statistical-methods">Module 4: Statistical Methods</h3>
+
+<h4 id="key-topics-3">Key Topics:</h4>
+<ul>
+  <li><strong>Descriptive Statistics</strong>: Mean, median, variance, standard deviation</li>
+  <li><strong>Hypothesis Testing</strong>: p-values, significance levels</li>
+  <li><strong>Correlation and Covariance</strong>: Relationships between variables</li>
+  <li><strong>Distributions</strong>: Understanding different types</li>
+  <li><strong>Sampling</strong>: Population vs. sample</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Correlation vs Causation</h4>
+  <p>A fundamental principle in statistics: Correlation does not imply causation. Two variables can be correlated without one causing the other.</p>
+</div>
+
+<p><strong>Key Statistical Measures:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mean: μ = Σx / n
+
+Standard Deviation: σ = √(Σ(x-μ)² / n)
+
+Covariance: Cov(X,Y) = E[(X-μₓ)(Y-μᵧ)]
+
+Correlation: ρ = Cov(X,Y) / (σₓ × σᵧ)
+
+Z-Score: z = (x - μ) / σ
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Normal Distribution</h4>
+  <p>Know the 68-95-99.7 rule: 68% of data within 1σ, 95% within 2σ, 99.7% within 3σ. This is frequently tested.</p>
+</div>
+
+<hr />
+
+<h3 id="module-5-optimization">Module 5: Optimization</h3>
+
+<h4 id="key-topics-4">Key Topics:</h4>
+<ul>
+  <li><strong>Gradient Descent</strong>: First-order optimization</li>
+  <li><strong>Stochastic Gradient Descent (SGD)</strong>: Practical version</li>
+  <li><strong>Convergence</strong>: When to stop optimization</li>
+  <li><strong>Learning Rates</strong>: Hyperparameter selection</li>
+  <li><strong>Momentum and Acceleration</strong>: Advanced techniques</li>
+</ul>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Optimization in Practice</h4>
+  <p>In production systems, companies use advanced optimizers like Adam, RMSprop, or AdamW. These adapt the learning rate per parameter, often outperforming simple SGD. Study these implementations!</p>
+</div>
+
+<p><strong>Gradient Descent Update:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>θ_new = θ_old - α × ∇J(θ)
+
+where α is the learning rate and ∇J is the gradient
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Issue: Vanishing/Exploding Gradients</h4>
+  <p>Deep networks can suffer from gradients that become too small or too large. Solutions include careful initialization, batch normalization, and appropriate activation functions.</p>
+</div>
+
+<hr />
+
+<h3 id="module-6-dimensionality-reduction--pca">Module 6: Dimensionality Reduction &amp; PCA</h3>
+
+<h4 id="key-topics-5">Key Topics:</h4>
+<ul>
+  <li><strong>Variance Maximization</strong>: Projecting data to directions of maximum variance</li>
+  <li><strong>Covariance Matrix &amp; Eigen Decomposition</strong>: Link to principal components</li>
+  <li><strong>Explained Variance Ratio</strong>: Selecting number of components</li>
+  <li><strong>Whitening &amp; Reconstruction</strong>: Transformations and inverse mapping</li>
+</ul>
+
+<p><strong>Core Equations:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given centered data matrix X ∈ ℝ^{n×d}
+
+Covariance: Σ = (1/n) XᵀX
+
+Eigen Decomposition: Σ vᵢ = λᵢ vᵢ
+Principal Components: columns of V = [v₁, v₂, ..., v_d]
+Project to k components: Z = X V_k  (V_k: top-k eigenvectors)
+
+Explained Variance Ratio (EVR):
+EVR_k = (Σ_{i=1..k} λᵢ) / (Σ_{i=1..d} λᵢ)
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Choosing k</h4>
+  <p>Plot the scree curve (eigenvalues) and pick k at the elbow. Alternatively, choose the smallest k with EVR ≥ 0.95 for strong compression.</p>
+</div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: PCA for Pipelines</h4>
+  <p>Use PCA to reduce dimensionality before clustering or regression to stabilize models and speed up training. Standardize features before PCA.</p>
+</div>
+
+<hr />
+
+<h3 id="module-7-optimization-for-support-vector-machines-svm">Module 7: Optimization for Support Vector Machines (SVM)</h3>
+
+<h4 id="key-topics-6">Key Topics:</h4>
+<ul>
+  <li><strong>Primal Formulation</strong>: Margin maximization with hinge loss</li>
+  <li><strong>Dual Formulation</strong>: Lagrange multipliers and kernels</li>
+  <li><strong>KKT Conditions</strong>: Complementary slackness and optimality</li>
+  <li><strong>Kernel Trick</strong>: Implicit feature mapping via kernels</li>
+</ul>
+
+<p><strong>Primal (Soft-Margin) SVM:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given training set {(xᵢ, yᵢ)} with yᵢ ∈ {−1, +1}
+
+min_{w,b,ξ}  (1/2)‖w‖² + C Σ ξᵢ
+subject to: yᵢ (wᵀ xᵢ + b) ≥ 1 − ξᵢ,  ξᵢ ≥ 0
+</code></pre></div></div>
+
+<p><strong>Dual Form:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>max_α  Σ αᵢ − (1/2) ΣΣ αᵢ αⱼ yᵢ yⱼ K(xᵢ, xⱼ)
+subject to: 0 ≤ αᵢ ≤ C,  Σ αᵢ yᵢ = 0
+
+Decision function: f(x) = sign(Σ αᵢ yᵢ K(xᵢ, x) + b)
+</code></pre></div></div>
+
+<p><strong>KKT Conditions (at optimum):</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>αᵢ ≥ 0, ξᵢ ≥ 0
+αᵢ [ yᵢ (wᵀ xᵢ + b) − 1 + ξᵢ ] = 0
+μᵢ ξᵢ = 0,  μᵢ ≥ 0  (for slack constraints)
+</code></pre></div></div>
+
+<div class="alert alert-info">
+  <h4>ℹ️ Important: Support Vectors</h4>
+  <p>Only points with αᵢ &gt; 0 contribute to the decision boundary. These are the support vectors; removing non-support vectors doesn’t change the classifier.</p>
+</div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Feature Scaling</h4>
+  <p>SVMs are sensitive to feature scales. Always standardize features before training to avoid dominance of high-variance features.</p>
+</div>
+
+<hr />
+
+<h2 id="-learning-outcomes">🎯 Learning Outcomes</h2>
+
+<p>By the end of this course, you should be able to:</p>
+
+<ul>
+  <li>✅ Perform matrix operations and understand eigenvalues/eigenvectors</li>
+  <li>✅ Apply calculus concepts to optimization problems</li>
+  <li>✅ Calculate probabilities and apply Bayes’ theorem</li>
+  <li>✅ Interpret statistical results and hypothesis tests</li>
+  <li>✅ Implement gradient descent optimization</li>
+  <li>✅ Perform PCA and reason about explained variance</li>
+  <li>✅ Derive SVM primal/dual and apply KKT conditions</li>
+</ul>
+
+<hr />
+
+<h2 id="-practice-problems">🔬 Practice Problems</h2>
+
+<div class="alert alert-info">
+  <h4>Practice Question 1: Matrix Operations</h4>
+  <p>Given matrices A (2×3) and B (3×4), what are the dimensions of AB? Can you calculate BA?</p>
+</div>
+
+<div class="alert alert-info">
+  <h4>Practice Question 2: Bayes' Theorem</h4>
+  <p>A disease affects 1% of population. A test is 99% accurate. If you test positive, what's the probability you actually have the disease?</p>
+</div>
+
+<div class="alert alert-info">
+  <h4>Practice Question 3: Gradient Descent</h4>
+  <p>Explain why a learning rate that's too high might cause gradient descent to diverge.</p>
+</div>
+
+<hr />
+
+<h2 id="-exam-tips">⚡ Exam Tips</h2>
+
+<div class="card">
+  <h4>🎓 What to Focus On</h4>
+  <ul>
+    <li>Master the <strong>chain rule</strong> - it appears in many problems</li>
+    <li>Know how to compute <strong>eigenvalues and eigenvectors</strong></li>
+    <li>Understand <strong>Bayes' theorem</strong> conceptually and mathematically</li>
+    <li>Be able to <strong>solve optimization problems</strong> using calculus</li>
+    <li>Know the properties of common distributions (normal, exponential)</li>
+  </ul>
+</div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Common Exam Mistakes</h4>
+  <ul>
+    <li>Forgetting to multiply by chain rule derivatives</li>
+    <li>Incorrect matrix dimension calculation</li>
+    <li>Confusing correlation with causation in statistics</li>
+    <li>Sign errors in gradient descent updates</li>
+  </ul>
+</div>
+
+<hr />
+
+<h2 id="-industry-applications">💼 Industry Applications</h2>
+
+<h3 id="data-science">Data Science</h3>
+<p>Probability and statistics are core to A/B testing, user segmentation, and model evaluation.</p>
+
+<h3 id="machine-learning">Machine Learning</h3>
+<p>Linear algebra and calculus are essential for training neural networks and implementing algorithms.</p>
+
+<h3 id="finance--economics">Finance &amp; Economics</h3>
+<p>Optimization and probability theory drive portfolio management and risk assessment.</p>
+
+<h3 id="computer-vision">Computer Vision</h3>
+<p>Linear algebra is used extensively for image transformations and deep learning models.</p>
+
+<hr />
+
+<h2 id="-external-resources">🔗 External Resources</h2>
+
+<h3 id="recommended-reading">Recommended Reading</h3>
+<ul>
+  <li><a href="https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/">Linear Algebra - MIT OpenCourseWare</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">3Blue1Brown: Essence of Linear Algebra</a></li>
+  <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr28mDVmKKX8p-yc_LKiU">3Blue1Brown: Essence of Calculus</a></li>
+</ul>
+
+<h3 id="tools--libraries">Tools &amp; Libraries</h3>
+<ul>
+  <li><strong>NumPy</strong>: Python library for numerical computing</li>
+  <li><strong>SciPy</strong>: Scientific computing with optimization tools</li>
+  <li><strong>SymPy</strong>: Symbolic mathematics</li>
+</ul>
+
+<h3 id="research-papers">Research Papers</h3>
+<ul>
+  <li><a href="https://math.mit.edu/~gs/learningfromdata/">Linear Algebra and Learning from Data - Gilbert Strang</a></li>
+</ul>
+
+<hr />
+
+<h2 id="-quick-reference-cheatsheet">📋 Quick Reference Cheatsheet</h2>
+
+<h3 id="linear-algebra">Linear Algebra</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vector dot product: a·b = Σ aᵢbᵢ
+Matrix transpose: (AB)ᵀ = BᵀAᵀ
+Trace: tr(A) = Σ aᵢᵢ (sum of diagonal)
+</code></pre></div></div>
+
+<h3 id="calculus">Calculus</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Product rule: (fg)' = f'g + fg'
+Quotient rule: (f/g)' = (f'g - fg') / g²
+</code></pre></div></div>
+
+<h3 id="probability">Probability</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P(A∪B) = P(A) + P(B) - P(A∩B)
+P(A∩B) = P(A|B) × P(B)
+</code></pre></div></div>
+
+<h3 id="statistics">Statistics</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Confidence Interval: μ ± z × (σ/√n)
+t-statistic: t = (x̄ - μ) / (s/√n)
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-need-help">📞 Need Help?</h2>
+
+<ul>
+  <li>Check the <a href="/semester_1_all_course/resources/">Resources page</a> for additional learning materials</li>
+  <li>Review the practice problems and solutions</li>
+  <li>Consult the external resource links provided above</li>
+</ul>
+
+<p><strong>Last Updated</strong>: December 2025</p>
+
+</article>
+
+<style>
+  @media (max-width: 768px) {
+    .global-sidebar { display: none; }
+    .container > div { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  <div class="container">
+    <div>
+      <h3>📚 About This Site</h3>
+      <p>A comprehensive course platform designed for AI/ML students featuring detailed notes, exam tips, industry insights, and curated resources.</p>
+    </div>
+    <div>
+      <h3>📖 Quick Links</h3>
+      <ul>
+        <li><a href="/semester_1_all_course/">Home</a></li>
+        <li><a href="/semester_1_all_course/courses/">Courses</a></li>
+        <li><a href="/semester_1_all_course/resources/">Resources</a></li>
+        <li><a href="/semester_1_all_course/about/">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>🔗 External Resources</h3>
+      <ul>
+        <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+        <li><a href="https://www.edx.org/" target="_blank">edX</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><a href="https://arxiv.org/" target="_blank">arXiv</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>💡 Repository</h3>
+      <p><a href="https://github.com/shivam2003-dev/semester_1_all_course" target="_blank">View on GitHub</a></p>
+      <p style="margin-top: 1em;"><a href="https://github.com/shivam2003-dev" target="_blank">@shivam2003-dev</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AIML Course Hub. All rights reserved. | Built with Jekyll & GitHub Pages</p>
+  </div>
+</footer>
+
+</body>
+</html>

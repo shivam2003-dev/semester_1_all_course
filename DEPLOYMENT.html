@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deployment Guide - AIML Course Hub</title>
+  <meta name="description" content="Comprehensive AI/ML Course Website with Notes, Resources & Industry Tips">
+  <link rel="stylesheet" href="/semester_1_all_course/assets/css/style.css">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>📚</text></svg>">
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">📚 AIML Course Hub</div>
+    <div class="site-description">Comprehensive AI/ML Course Website with Notes, Resources & Industry Tips</div>
+  </div>
+</header>
+
+  
+  <main class="content-wrapper">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 2em; align-items: start;">
+        <aside class="global-sidebar">
+  <nav class="global-nav">
+    <ul>
+      <li><a href="/semester_1_all_course/">🏠 Home</a></li>
+      <li><a href="/semester_1_all_course/courses/">📚 Courses</a></li>
+      <li><a href="/semester_1_all_course/resources/">🔗 Resources</a></li>
+      <li><a href="/semester_1_all_course/about/">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  
+  
+
+  
+</aside>
+
+        <div>
+          <h1 id="-deployment-guide">🚀 Deployment Guide</h1>
+
+<p>This guide explains how to deploy the AIML Course Hub website to GitHub Pages.</p>
+
+<hr />
+
+<h2 id="-prerequisites">📋 Prerequisites</h2>
+
+<ul>
+  <li>GitHub account (with push access)</li>
+  <li>Git installed locally</li>
+  <li>The repository cloned to your machine</li>
+</ul>
+
+<hr />
+
+<h2 id="-deployment-steps">🔄 Deployment Steps</h2>
+
+<h3 id="step-1-commit-all-changes">Step 1: Commit All Changes</h3>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Clean Commits</h4>
+  <p>Always commit and push your changes before deploying. Make sure the main branch is in a good state with no uncommitted changes.</p>
+</div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /Users/shivamkumar/semester_1_all_course
+
+<span class="c"># Check status</span>
+git status
+
+<span class="c"># Stage all changes</span>
+git add <span class="nb">.</span>
+
+<span class="c"># Commit with meaningful message</span>
+git commit <span class="nt">-m</span> <span class="s2">"Add comprehensive course materials and deployment"</span>
+
+<span class="c"># Push to main branch</span>
+git push origin main
+</code></pre></div></div>
+
+<h3 id="step-2-configure-github-pages">Step 2: Configure GitHub Pages</h3>
+
+<p><strong>Method 1: Using gh-pages Branch (Recommended)</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create gh-pages branch if it doesn't exist</span>
+git branch gh-pages
+
+<span class="c"># Push to gh-pages</span>
+git push origin gh-pages
+
+<span class="c"># In GitHub repository settings:</span>
+<span class="c"># Settings → Pages → Branch: gh-pages</span>
+</code></pre></div></div>
+
+<p><strong>Method 2: Using main Branch with docs Folder</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build site to docs folder</span>
+bundle <span class="nb">exec </span>jekyll build <span class="nt">--destination</span> docs
+
+<span class="c"># Commit and push</span>
+git add docs/
+git commit <span class="nt">-m</span> <span class="s2">"Build site for GitHub Pages"</span>
+git push origin main
+
+<span class="c"># In GitHub repository settings:</span>
+<span class="c"># Settings → Pages → Source: main branch /docs folder</span>
+</code></pre></div></div>
+
+<p><strong>Method 3: Automated with GitHub Actions (Recommended)</strong></p>
+
+<p>Create <code class="language-plaintext highlighter-rouge">.github/workflows/jekyll.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Build and Deploy Jekyll</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build-and-deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v3</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Ruby</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">ruby/setup-ruby@v1</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">ruby-version</span><span class="pi">:</span> <span class="m">3.1</span>
+          <span class="na">bundler-cache</span><span class="pi">:</span> <span class="kc">true</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build site</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">bundle exec jekyll build</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GitHub Pages</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">peaceiris/actions-gh-pages@v3</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">github_token</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">publish_dir</span><span class="pi">:</span> <span class="s">./_site</span>
+</code></pre></div></div>
+
+<h3 id="step-3-verify-repository-settings">Step 3: Verify Repository Settings</h3>
+
+<p>Go to your GitHub repository and configure:</p>
+
+<ol>
+  <li><strong>Settings → Pages</strong>
+    <ul>
+      <li>Source: Select appropriate branch (main, gh-pages, or main/docs)</li>
+      <li>Choose theme (optional)</li>
+      <li>Save</li>
+    </ul>
+  </li>
+  <li><strong>Settings → Branches</strong>
+    <ul>
+      <li>Set default branch (usually main)</li>
+      <li>Enable branch protection if desired</li>
+    </ul>
+  </li>
+  <li><strong>Settings → Secrets and variables</strong> (if using GitHub Actions)
+    <ul>
+      <li>Add GitHub token if needed</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="step-4-monitor-build">Step 4: Monitor Build</h3>
+
+<div class="alert alert-info">
+  <h4>ℹ️ Build Status</h4>
+  <p>GitHub will automatically build your site. Check Actions tab to see build status.</p>
+</div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Repository → Actions → workflow runs
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-after-deployment">🌐 After Deployment</h2>
+
+<h3 id="verify-website-is-live">Verify Website is Live</h3>
+
+<p>Visit your site at:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://shivam2003-dev.github.io/semester_1_all_course
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Success Indicators</h4>
+  <ul>
+    <li>Site loads without errors</li>
+    <li>All pages accessible</li>
+    <li>CSS and styling applied</li>
+    <li>Images and resources load</li>
+    <li>Navigation works</li>
+  </ul>
+</div>
+
+<h3 id="check-site-functionality">Check Site Functionality</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Homepage loads correctly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All course pages accessible</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links to external resources work</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Navigation between pages works</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Mobile view responsive</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Search functionality (if implemented)</li>
+</ul>
+
+<hr />
+
+<h2 id="-troubleshooting">🔧 Troubleshooting</h2>
+
+<h3 id="issue-site-not-building">Issue: Site Not Building</h3>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Common Causes</h4>
+  <ul>
+    <li>Syntax errors in YAML frontmatter</li>
+    <li>Invalid Markdown</li>
+    <li>Plugin conflicts</li>
+    <li>Branch not configured in settings</li>
+  </ul>
+</div>
+
+<p><strong>Solution:</strong></p>
+<ol>
+  <li>Check build logs in GitHub Actions</li>
+  <li>Validate YAML frontmatter</li>
+  <li>Test locally: <code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code></li>
+  <li>Ensure correct branch is selected in Pages settings</li>
+</ol>
+
+<h3 id="issue-site-shows-404">Issue: Site Shows 404</h3>
+
+<p><strong>Possible Causes:</strong></p>
+<ul>
+  <li>Wrong domain/URL</li>
+  <li>Pages not enabled in settings</li>
+  <li>Build failed silently</li>
+</ul>
+
+<p><strong>Solution:</strong></p>
+<ol>
+  <li>Verify repository name in <code class="language-plaintext highlighter-rouge">_config.yml</code>: <code class="language-plaintext highlighter-rouge">baseurl</code></li>
+  <li>Check GitHub Pages settings</li>
+  <li>Wait 1-2 minutes after push</li>
+  <li>Hard refresh browser (Ctrl+Shift+R)</li>
+</ol>
+
+<h3 id="issue-cssstyling-not-applied">Issue: CSS/Styling Not Applied</h3>
+
+<p><strong>Possible Causes:</strong></p>
+<ul>
+  <li>Incorrect baseurl in <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+  <li>CSS not built</li>
+  <li>Asset paths wrong</li>
+</ul>
+
+<p><strong>Solution:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Ensure _config.yml has correct baseurl</span>
+baseurl: <span class="s2">"/semester_1_all_course"</span>
+
+<span class="c"># Rebuild locally</span>
+bundle <span class="nb">exec </span>jekyll clean
+bundle <span class="nb">exec </span>jekyll build
+
+<span class="c"># Push changes</span>
+git add <span class="nb">.</span> <span class="o">&amp;&amp;</span> git commit <span class="nt">-m</span> <span class="s2">"Fix styling"</span> <span class="o">&amp;&amp;</span> git push
+</code></pre></div></div>
+
+<h3 id="issue-images-not-loading">Issue: Images Not Loading</h3>
+
+<p><strong>Solution:</strong></p>
+<ol>
+  <li>Check image paths are relative</li>
+  <li>Ensure images in <code class="language-plaintext highlighter-rouge">assets/images/</code> folder</li>
+  <li>Use correct URL: <code class="language-plaintext highlighter-rouge">/semester_1_all_course/assets/images/filename.jpg</code></li>
+</ol>
+
+<hr />
+
+<h2 id="-maintenance">📝 Maintenance</h2>
+
+<h3 id="regular-updates">Regular Updates</h3>
+
+<p>After deploying, keep the site updated:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Make content changes</span>
+<span class="c"># 2. Commit changes</span>
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Update course materials"</span>
+
+<span class="c"># 3. Push to repository</span>
+git push origin main
+
+<span class="c"># 4. GitHub Pages auto-deploys (wait 1-2 minutes)</span>
+</code></pre></div></div>
+
+<h3 id="testing-changes-locally">Testing Changes Locally</h3>
+
+<p>Before pushing to production:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build and serve locally</span>
+bundle <span class="nb">exec </span>jekyll serve
+
+<span class="c"># Visit http://localhost:4000/semester_1_all_course</span>
+<span class="c"># Test all pages and functionality</span>
+</code></pre></div></div>
+
+<h3 id="version-control-best-practices">Version Control Best Practices</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create feature branches for major changes</span>
+git checkout <span class="nt">-b</span> feature/new-course
+
+<span class="c"># Make changes and test</span>
+<span class="c"># ...</span>
+
+<span class="c"># Commit changes</span>
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"Add new course content"</span>
+
+<span class="c"># Push feature branch</span>
+git push origin feature/new-course
+
+<span class="c"># Create Pull Request on GitHub</span>
+<span class="c"># After review, merge to main</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-security">🔒 Security</h2>
+
+<h3 id="github-pages-security-features">GitHub Pages Security Features</h3>
+
+<ul>
+  <li>HTTPS enabled by default</li>
+  <li>CNAME records supported</li>
+  <li>DNS verification</li>
+</ul>
+
+<h3 id="best-practices">Best Practices</h3>
+
+<ol>
+  <li><strong>Keep Dependencies Updated</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle update
+</code></pre></div>    </div>
+  </li>
+  <li><strong>No Sensitive Data</strong>
+    <ul>
+      <li>Never commit API keys, passwords, tokens</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">.gitignore</code> for secrets</li>
+    </ul>
+  </li>
+  <li><strong>Branch Protection</strong>
+    <ul>
+      <li>Enable in Settings → Branches</li>
+      <li>Require reviews for main branch merges</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="-custom-domain-optional">🚀 Custom Domain (Optional)</h2>
+
+<p>To use a custom domain:</p>
+
+<ol>
+  <li><strong>Add CNAME file</strong> to repository:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>your-domain.com
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Configure DNS</strong> with your registrar:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CNAME record pointing to: shivam2003-dev.github.io
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Enable in GitHub Pages</strong>:
+    <ul>
+      <li>Settings → Pages → Custom domain</li>
+      <li>Enter domain</li>
+      <li>Verify/enable HTTPS</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="-performance-optimization">📊 Performance Optimization</h2>
+
+<h3 id="for-faster-builds">For Faster Builds:</h3>
+
+<ol>
+  <li><strong>Exclude unnecessary files</strong> in <code class="language-plaintext highlighter-rouge">_config.yml</code>:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">exclude</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">vendor/</span>
+  <span class="pi">-</span> <span class="s">Gemfile</span>
+  <span class="pi">-</span> <span class="s">Gemfile.lock</span>
+  <span class="pi">-</span> <span class="s">handout/</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Minimize CSS/JS</strong> in production</p>
+  </li>
+  <li><strong>Use image optimization</strong> for faster loading</li>
+</ol>
+
+<h3 id="check-performance">Check Performance:</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build performance</span>
+bundle <span class="nb">exec </span>jekyll build <span class="nt">--profile</span>
+
+<span class="c"># Analyze build time per file</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-continuous-deployment-pipeline">🔄 Continuous Deployment Pipeline</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Local Changes
+    ↓
+git add/commit
+    ↓
+git push origin main
+    ↓
+GitHub Webhook Triggered
+    ↓
+GitHub Actions Build Job
+    ↓
+Jekyll Build Process
+    ↓
+Deploy to gh-pages Branch
+    ↓
+GitHub Pages Serves Site
+    ↓
+Site Live at: https://shivam2003-dev.github.io/semester_1_all_course
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-need-help">📞 Need Help?</h2>
+
+<h3 id="common-resources">Common Resources</h3>
+
+<ul>
+  <li><a href="https://jekyllrb.com/docs/">Jekyll Documentation</a></li>
+  <li><a href="https://docs.github.com/en/pages">GitHub Pages Help</a></li>
+  <li><a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a></li>
+</ul>
+
+<h3 id="troubleshooting-links">Troubleshooting Links</h3>
+
+<ul>
+  <li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/troubleshooting-jekyll-build-errors">GitHub Pages Troubleshooting</a></li>
+  <li><a href="https://jekyllrb.com/docs/troubleshooting/">Jekyll Troubleshooting</a></li>
+</ul>
+
+<h3 id="get-support">Get Support</h3>
+
+<ul>
+  <li>Check <a href="https://github.com/shivam2003-dev/semester_1_all_course/issues">Repository Issues</a></li>
+  <li>Create new issue with details</li>
+  <li>Include error logs and steps to reproduce</li>
+</ul>
+
+<hr />
+
+<h2 id="-deployment-checklist">✅ Deployment Checklist</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All files committed to main branch</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />No build errors locally (<code class="language-plaintext highlighter-rouge">bundle exec jekyll build</code>)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />_config.yml has correct baseurl</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />GitHub Pages enabled in repository settings</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Correct branch selected (main, gh-pages, or main/docs)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Waited 2-5 minutes after push</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Site accessible at GitHub Pages URL</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All pages load correctly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Links work properly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Mobile view responsive</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />CSS/styling applied correctly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Images load properly</li>
+</ul>
+
+<hr />
+
+<h2 id="-success">🎉 Success!</h2>
+
+<p>Your AIML Course Hub is now live on GitHub Pages!</p>
+
+<p><strong>Live URL</strong>: <code class="language-plaintext highlighter-rouge">https://shivam2003-dev.github.io/semester_1_all_course</code></p>
+
+<p><strong>Next Steps:</strong></p>
+<ol>
+  <li>Share the link with classmates</li>
+  <li>Gather feedback</li>
+  <li>Continue updating content</li>
+  <li>Monitor analytics</li>
+  <li>Celebrate! 🚀</li>
+</ol>
+
+<hr />
+
+<p><strong>Last Updated</strong>: December 2025</p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  <div class="container">
+    <div>
+      <h3>📚 About This Site</h3>
+      <p>A comprehensive course platform designed for AI/ML students featuring detailed notes, exam tips, industry insights, and curated resources.</p>
+    </div>
+    <div>
+      <h3>📖 Quick Links</h3>
+      <ul>
+        <li><a href="/semester_1_all_course/">Home</a></li>
+        <li><a href="/semester_1_all_course/courses/">Courses</a></li>
+        <li><a href="/semester_1_all_course/resources/">Resources</a></li>
+        <li><a href="/semester_1_all_course/about/">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>🔗 External Resources</h3>
+      <ul>
+        <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+        <li><a href="https://www.edx.org/" target="_blank">edX</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><a href="https://arxiv.org/" target="_blank">arXiv</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>💡 Repository</h3>
+      <p><a href="https://github.com/shivam2003-dev/semester_1_all_course" target="_blank">View on GitHub</a></p>
+      <p style="margin-top: 1em;"><a href="https://github.com/shivam2003-dev" target="_blank">@shivam2003-dev</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AIML Course Hub. All rights reserved. | Built with Jekyll & GitHub Pages</p>
+  </div>
+</footer>
+
+</body>
+</html>

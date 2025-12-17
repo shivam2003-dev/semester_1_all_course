@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Statistical Methods - AIML Course Hub</title>
+  <meta name="description" content="Master statistical methods for data analysis, inference, and forecasting">
+  <link rel="stylesheet" href="/semester_1_all_course/assets/css/style.css">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>📚</text></svg>">
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="site-title">📚 AIML Course Hub</div>
+    <div class="site-description">Comprehensive AI/ML Course Website with Notes, Resources & Industry Tips</div>
+  </div>
+</header>
+
+  
+  <main class="content-wrapper">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 2em; align-items: start;">
+        <aside class="global-sidebar">
+  <nav class="global-nav">
+    <ul>
+      <li><a href="/semester_1_all_course/">🏠 Home</a></li>
+      <li><a href="/semester_1_all_course/courses/">📚 Courses</a></li>
+      <li><a href="/semester_1_all_course/resources/">🔗 Resources</a></li>
+      <li><a href="/semester_1_all_course/about/">ℹ️ About</a></li>
+    </ul>
+  </nav>
+
+  
+  
+
+  
+  <div class="sidebar-section">
+    <h3>📖 Course Info</h3>
+    <p><strong>Course:</strong> Introduction to Statistical Methods</p>
+    <p><strong>Credits:</strong> 4</p>
+    <p><strong>Instructor:</strong> Dr Y V K Ravi Kumar</p>
+    <p><strong>Level:</strong> Intermediate</p>
+  </div>
+
+  
+  <div class="sidebar-section">
+    <h3>📊 Topics</h3>
+    <ul>
+      
+      <li>Probability Theory & Bayes Theorem</li>
+      
+      <li>Probability Distributions</li>
+      
+      <li>Hypothesis Testing & ANOVA</li>
+      
+      <li>Time Series Analysis</li>
+      
+      <li>Regression & Correlation</li>
+      
+      <li>Gaussian Mixture Models</li>
+      
+    </ul>
+  </div>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  <p style="margin-top: 1.5em;"><a href="https://github.com/shivam2003-dev/semester_1_all_course" class="btn" style="width: 100%; text-align: center; display: block;">🐙 GitHub Repository</a></p>
+  
+  
+</aside>
+
+        <div>
+          <article class="course-detail">
+  <div class="breadcrumb">
+    <li><a href="/semester_1_all_course/">Home</a></li>
+    <li><a href="/semester_1_all_course/courses/">Courses</a></li>
+    <li>Introduction to Statistical Methods</li>
+  </div>
+
+  <div class="course-header" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 2em; border-radius: 8px; margin-bottom: 2em;">
+    <h1 style="color: white; border: none; padding-bottom: 0; margin-bottom: 0.5em;">Introduction to Statistical Methods</h1>
+    <p style="margin: 0; opacity: 0.9; font-size: 1.1em;">Master statistical methods for data analysis, inference, and forecasting</p>
+  </div>
+
+  <h2 id="-course-overview">📝 Course Overview</h2>
+
+<p>This comprehensive course equips you with essential statistical methods for data analysis, inference, and prediction. From fundamental probability concepts to advanced time series forecasting and expectation-maximization algorithms, you’ll learn practical statistical techniques used across data science, machine learning, and business analytics.</p>
+
+<hr />
+
+<h2 id="-course-content">📚 Course Content</h2>
+
+<h3 id="module-1-basic-probability--statistics">Module 1: Basic Probability &amp; Statistics</h3>
+
+<h4 id="key-topics">Key Topics:</h4>
+<ul>
+  <li><strong>Measures of Central Tendency</strong>: Mean, Median, Mode</li>
+  <li><strong>Measures of Variability</strong>: Variance, Standard Deviation, Range, IQR</li>
+  <li><strong>Outlier Detection</strong>: 5-point summary, Skewness, Kurtosis</li>
+  <li><strong>Probability Basics</strong>: Sample spaces, events, axioms</li>
+  <li><strong>Probability Concepts</strong>: Mutually exclusive and independent events</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Statistics Foundation</h4>
+  <p>Understanding descriptive statistics is essential. Measures of central tendency and variability give us insights into data distribution. These simple concepts are the foundation for all advanced statistical analysis.</p>
+</div>
+
+<p><strong>Key Statistical Measures:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mean: μ = Σx / n
+
+Variance: σ² = Σ(x - μ)² / n
+
+Standard Deviation: σ = √(σ²)
+
+Coefficient of Variation: CV = σ / μ × 100%
+
+Skewness: Indicates asymmetry of distribution
+Positive skew: tail on right
+Negative skew: tail on left
+
+Kurtosis: Measures tail heaviness
+High kurtosis = heavy tails (outliers likely)
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: 5-Point Summary</h4>
+  <p>The 5-point summary (Min, Q1, Median, Q3, Max) is crucial for understanding data distribution and identifying outliers. Use the IQR method: outliers are values beyond Q1-1.5×IQR or Q3+1.5×IQR.</p>
+</div>
+
+<p><strong>Probability Basics:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Axioms of Probability:
+1. P(A) ≥ 0 for any event A
+2. P(S) = 1 (where S is sample space)
+3. For mutually exclusive events: P(A ∪ B) = P(A) + P(B)
+
+Mutually Exclusive: Events cannot occur together
+P(A ∩ B) = 0
+
+Independent Events: Occurrence of one doesn't affect other
+P(A ∩ B) = P(A) × P(B)
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Independence vs Exclusivity</h4>
+  <p>Students often confuse independent events with mutually exclusive events. They're opposite concepts! Mutually exclusive events cannot occur together, while independent events don't affect each other's probability.</p>
+</div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Probability Calculations</h4>
+  <p>Remember: P(A) is always between 0 and 1. If your calculation gives probability &gt; 1 or &lt; 0, you've made an error. Also, probabilities of all outcomes must sum to 1.</p>
+</div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Data Profiling</h4>
+  <p>In production systems, continuous data profiling is critical. Generate statistics regularly to detect data quality issues, anomalies, and distribution shifts. Use statistical checks to trigger alerts.</p>
+</div>
+
+<hr />
+
+<h3 id="module-2-conditional-probability--bayes-theorem">Module 2: Conditional Probability &amp; Bayes Theorem</h3>
+
+<h4 id="key-topics-1">Key Topics:</h4>
+<ul>
+  <li><strong>Conditional Probability</strong>: Probability given prior information</li>
+  <li><strong>Total Probability</strong>: Decomposing complex probabilities</li>
+  <li><strong>Bayes Theorem</strong>: Updating beliefs with new evidence</li>
+  <li><strong>Naive Bayes</strong>: Probabilistic classification algorithm</li>
+  <li><strong>Applications</strong>: Medical diagnosis, spam detection, classification</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Conditional Probability is Fundamental</h4>
+  <p>Most real-world problems involve conditional probabilities. "What's the probability given that..." appears constantly. Understanding this concept unlocks Bayes Theorem and probabilistic reasoning.</p>
+</div>
+
+<p><strong>Conditional Probability:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P(A|B) = P(A ∩ B) / P(B)  [Probability of A given B occurred]
+
+For Independent Events:
+P(A|B) = P(A)  [B doesn't affect A's probability]
+
+Total Probability Law:
+P(A) = Σ P(A|Bᵢ) × P(Bᵢ)
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Bayes Theorem</h4>
+  <p>Know Bayes Theorem by heart: P(A|B) = P(B|A) × P(A) / P(B). Understand it conceptually: it updates prior beliefs P(A) with new evidence B to give posterior probability P(A|B).</p>
+</div>
+
+<p><strong>Bayes Theorem - The Heart of Statistical Inference:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bayes Theorem:
+P(A|B) = P(B|A) × P(A) / P(B)
+
+Components:
+- P(A): Prior (what we believed before new evidence)
+- P(B|A): Likelihood (probability of evidence given A)
+- P(B): Evidence (total probability of observing B)
+- P(A|B): Posterior (updated belief after seeing evidence)
+
+Example - Medical Testing:
+Disease prevalence (prior): P(Disease) = 0.01
+Test accuracy (likelihood): P(Positive|Disease) = 0.95
+False positive rate: P(Positive|No Disease) = 0.05
+
+After positive test:
+P(Disease|Positive) = 0.95 × 0.01 / [0.95 × 0.01 + 0.05 × 0.99]
+                    = 0.0095 / 0.0590
+                    ≈ 0.161 (16.1%, not 95%!)
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Base Rate Fallacy</h4>
+  <p>The base rate (prior probability) is crucial! Ignoring it is a common error in medical diagnosis and other domains. Even with high test accuracy, if disease is rare, a positive test might still have low probability of disease.</p>
+</div>
+
+<p><strong>Naive Bayes Classification:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Assumes features are conditionally independent given class label
+
+P(Class|Features) = P(Features|Class) × P(Class) / P(Features)
+
+≈ P(x₁|Class) × P(x₂|Class) × ... × P(xₙ|Class) × P(Class)
+
+Despite "naive" assumption, works surprisingly well in practice!
+</code></pre></div></div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Bayesian Methods</h4>
+  <p>Bayesian inference is becoming standard in industry. Tools like Bayesian optimization, Bayesian networks, and probabilistic programming (PyMC, Stan) help quantify uncertainty - crucial for decision-making under uncertainty.</p>
+</div>
+
+<hr />
+
+<h3 id="module-3-probability-distributions">Module 3: Probability Distributions</h3>
+
+<h4 id="key-topics-2">Key Topics:</h4>
+<ul>
+  <li><strong>Random Variables</strong>: Discrete and continuous</li>
+  <li><strong>Discrete Distributions</strong>: Bernoulli, Binomial, Poisson</li>
+  <li><strong>Continuous Distributions</strong>: Normal, t, F, Chi-Square</li>
+  <li><strong>Transformation of Variables</strong>: Function of random variables</li>
+  <li><strong>Joint Distributions</strong>: Correlation and covariance</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Distribution Selection Matters</h4>
+  <p>Choosing the right distribution is critical for statistical modeling. Different distributions suit different phenomena. Understanding their characteristics helps model selection and inference.</p>
+</div>
+
+<p><strong>Discrete Distributions:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bernoulli Distribution (single trial, success/failure)
+P(X=k) = p^k × (1-p)^(1-k)  for k ∈ {0,1}
+Mean = p, Variance = p(1-p)
+
+Binomial Distribution (n independent Bernoulli trials)
+P(X=k) = C(n,k) × p^k × (1-p)^(n-k)
+Mean = np, Variance = np(1-p)
+
+Poisson Distribution (count of events in fixed interval)
+P(X=k) = (e^(-λ) × λ^k) / k!
+Mean = λ, Variance = λ
+Used for: page hits, accidents, radioactive decay
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Distribution Properties</h4>
+  <p>Know the mean and variance of each distribution. For binomial: mean = np, var = np(1-p). For Poisson: mean = var = λ. These appear in hypothesis tests and confidence intervals.</p>
+</div>
+
+<p><strong>Continuous Distributions:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Normal (Gaussian) Distribution
+f(x) = (1/(σ√(2π))) × e^(-(x-μ)²/(2σ²))
+Defined by: mean μ and standard deviation σ
+68-95-99.7 rule: 68% within 1σ, 95% within 2σ, 99.7% within 3σ
+
+Standardized Normal (Z-distribution)
+μ = 0, σ = 1
+Z = (X - μ) / σ
+
+t-Distribution
+Similar to normal but with heavier tails
+Used when σ is unknown (more common in practice)
+Degrees of freedom parameter
+
+Chi-Square Distribution
+Used for variance tests and goodness-of-fit tests
+Defined by degrees of freedom
+
+F-Distribution
+Used for ANOVA and comparing variances
+Ratio of two chi-square distributions
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Normal Distribution Assumption</h4>
+  <p>Many statistical tests assume normality. Always check this assumption! Use Q-Q plots or Shapiro-Wilk test. If data is non-normal, use non-parametric alternatives or transform the data.</p>
+</div>
+
+<p><strong>Transformations of Random Variables:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If Y = g(X), find distribution of Y
+
+Example: If X ~ N(0,1), then Y = X² ~ χ²(1)
+
+For continuous: fᵧ(y) = fₓ(g⁻¹(y)) × |dg⁻¹/dy|
+
+Understanding transformations helps with:
+- Model building
+- Change of variables in integration
+- Understanding derived statistics
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Covariance and Correlation</h4>
+  <p>Covariance depends on units (hard to interpret), correlation is unitless (-1 to 1). Use correlation to measure strength of linear relationship. Remember: correlation ≠ causation!</p>
+</div>
+
+<p><strong>Covariance and Correlation:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Covariance: Cov(X,Y) = E[(X-μₓ)(Y-μᵧ)]
+- Positive: variables move together
+- Negative: variables move opposite
+- But scale-dependent (hard to interpret)
+
+Correlation: ρ = Cov(X,Y) / (σₓ × σᵧ)
+- Ranges from -1 to 1
+- 0: no linear relationship
+- 1: perfect positive relationship
+- -1: perfect negative relationship
+</code></pre></div></div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Distribution Fitting</h4>
+  <p>In production, fit appropriate distributions to your data. Use goodness-of-fit tests (Kolmogorov-Smirnov, Anderson-Darling) to validate. This helps with confidence intervals, anomaly detection, and forecasting.</p>
+</div>
+
+<hr />
+
+<h3 id="module-4-hypothesis-testing">Module 4: Hypothesis Testing</h3>
+
+<h4 id="key-topics-3">Key Topics:</h4>
+<ul>
+  <li><strong>Sampling &amp; Sampling Distributions</strong>: Central Limit Theorem</li>
+  <li><strong>Point &amp; Interval Estimation</strong>: Confidence intervals</li>
+  <li><strong>Hypothesis Testing</strong>: Test statistics, p-values, significance levels</li>
+  <li><strong>Tests for Means</strong>: One sample, two sample, matched pairs</li>
+  <li><strong>Tests for Proportions</strong>: Binomial tests</li>
+  <li><strong>ANOVA</strong>: Single factor and two-factor</li>
+  <li><strong>Maximum Likelihood Estimation</strong>: Parameter estimation</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Central Limit Theorem is Powerful</h4>
+  <p>The Central Limit Theorem states that sample means are approximately normally distributed regardless of original distribution. This enables hypothesis testing even when population distribution is unknown!</p>
+</div>
+
+<p><strong>Central Limit Theorem:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If X₁, X₂, ..., Xₙ are i.i.d. with mean μ and variance σ²
+Then: X̄ ~ N(μ, σ²/n)  as n → ∞
+
+Key insight:
+- Sample mean is normally distributed
+- This holds even if population isn't normal
+- Larger n → smaller variance of X̄
+- Enables hypothesis testing for any distribution
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Hypothesis Testing Framework</h4>
+  <p>Follow the framework: 1) State H₀ and H₁ 2) Choose α (significance level) 3) Calculate test statistic 4) Find p-value 5) Make decision 6) Interpret in context. Practice all types: mean, proportion, ANOVA.</p>
+</div>
+
+<p><strong>Hypothesis Testing Steps:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Formulate Hypotheses
+   H₀: Null hypothesis (status quo)
+   H₁: Alternative hypothesis (what we're testing)
+
+2. Choose Significance Level α (typically 0.05)
+
+3. Collect Data and Calculate Test Statistic
+   t = (X̄ - μ₀) / (s/√n)  [for means]
+
+4. Find p-value
+   p-value = probability of observing data if H₀ true
+
+5. Make Decision
+   If p-value &lt; α: Reject H₀ (significant result)
+   If p-value ≥ α: Fail to reject H₀ (no significant result)
+
+6. Interpret Results
+   Include effect size and confidence intervals
+</code></pre></div></div>
+
+<p><strong>Confidence Intervals:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>General form: Point Estimate ± (Critical Value × Standard Error)
+
+Confidence Interval for Mean (σ unknown):
+X̄ ± t*(α/2, n-1) × (s/√n)
+
+Confidence Interval for Proportion:
+p̂ ± z*(α/2) × √(p̂(1-p̂)/n)
+
+Interpretation:
+"We're 95% confident the true parameter lies in this interval"
+NOT "95% probability parameter is in interval" (it's fixed!)
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: P-value Misinterpretation</h4>
+  <p>p-value is NOT probability that H₀ is true! It's the probability of data given H₀. Small p-value suggests data is unlikely if H₀ true, so we reject H₀. Don't confuse with effect size or practical significance.</p>
+</div>
+
+<p><strong>ANOVA (Analysis of Variance):</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>One-Factor ANOVA:
+Tests if means differ across k groups
+
+Test Statistic: F = MS_Between / MS_Within
+
+If F is large → groups have different means
+
+Two-Factor ANOVA:
+Tests effect of two factors and their interaction
+
+Null Hypotheses:
+- H₀(A): Factor A has no effect
+- H₀(B): Factor B has no effect
+- H₀(AB): No interaction between factors
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Multiple Testing</h4>
+  <p>If you run many tests, some will be significant by chance alone! Use Bonferroni correction: divide α by number of tests. Or use ANOVA instead of multiple t-tests.</p>
+</div>
+
+<p><strong>Maximum Likelihood Estimation (MLE):</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Find parameter values that maximize likelihood of observed data
+
+Likelihood: L(θ|data) = ∏ f(xᵢ|θ)
+
+Log-Likelihood: ℓ(θ) = Σ log f(xᵢ|θ)
+
+MLE: θ̂ = argmax ℓ(θ)
+
+Often solved by: ∂ℓ/∂θ = 0
+
+Properties:
+- Asymptotically normal
+- Efficient (reaches Cramér-Rao lower bound)
+- Invariant under transformations
+</code></pre></div></div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: A/B Testing</h4>
+  <p>A/B testing uses hypothesis testing principles to make business decisions. Understand power analysis to choose sample size, sequential testing to stop early, and multiple comparison corrections.</p>
+</div>
+
+<hr />
+
+<h3 id="module-5-prediction--forecasting">Module 5: Prediction &amp; Forecasting</h3>
+
+<h4 id="key-topics-4">Key Topics:</h4>
+<ul>
+  <li><strong>Correlation &amp; Regression</strong>: Linear relationships</li>
+  <li><strong>Simple &amp; Multiple Regression</strong>: Model fitting and evaluation</li>
+  <li><strong>Time Series Components</strong>: Trend, seasonality, noise</li>
+  <li><strong>MA &amp; Weighted MA</strong>: Moving average models</li>
+  <li><strong>AR, ARMA, ARIMA</strong>: Autoregressive models</li>
+  <li><strong>SARIMA, SARIMAX</strong>: Seasonal variants</li>
+  <li><strong>Exponential Smoothing</strong>: Forecasting techniques</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: Regression is Fundamental</h4>
+  <p>Regression is the most widely used statistical technique. From simple linear regression to complex time series models, regression concepts appear everywhere in data science and statistics.</p>
+</div>
+
+<p><strong>Regression Fundamentals:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Simple Linear Regression:
+ŷ = β₀ + β₁x
+
+Estimates:
+β₁ = Σ(xᵢ - x̄)(yᵢ - ȳ) / Σ(xᵢ - x̄)²
+β₀ = ȳ - β₁x̄
+
+R² (Coefficient of Determination):
+R² = 1 - (SS_res / SS_tot)
+Fraction of variance explained by model
+
+Multiple Regression:
+ŷ = β₀ + β₁x₁ + β₂x₂ + ... + βₚxₚ
+
+Matrix form: ŷ = Xβ
+β = (X'X)⁻¹ X'y  (normal equations)
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: Regression Output Interpretation</h4>
+  <p>Understand regression tables: coefficients, standard errors, t-statistics, p-values. Know what each means. Practice interpreting confidence intervals for coefficients and predictions.</p>
+</div>
+
+<p><strong>Time Series Analysis:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Components:
+- Trend: Long-term direction
+- Seasonality: Regular patterns (daily, monthly, yearly)
+- Noise: Random fluctuations
+
+Decomposition:
+Series = Trend × Seasonality × Noise  (multiplicative)
+Or
+Series = Trend + Seasonality + Noise  (additive)
+
+Moving Average (MA):
+ŷₜ = (yₜ + yₜ₋₁ + ... + yₜ₋ₖ₊₁) / k
+Smooths data, removes short-term fluctuations
+
+Weighted Moving Average:
+ŷₜ = w₁yₜ + w₂yₜ₋₁ + ... + wₖyₜ₋ₖ₊₁
+Recent observations weighted more heavily
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Stationarity Assumption</h4>
+  <p>Most time series models assume stationarity (mean, variance constant over time). Check this! If non-stationary, difference the series or use ARIMA. Ignoring non-stationarity invalidates analysis.</p>
+</div>
+
+<p><strong>ARIMA Models:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AR (AutoRegressive): Use past values
+yₜ = φ₁yₜ₋₁ + φ₂yₜ₋₂ + ... + φₚyₜ₋ₚ + εₜ
+
+MA (Moving Average): Use past errors
+yₜ = εₜ + θ₁εₜ₋₁ + θ₂εₜ₋₂ + ... + θqεₜ₋q
+
+ARIMA(p,d,q):
+p = AR order, d = differencing, q = MA order
+
+Example: ARIMA(1,1,1)
+- Difference once (d=1)
+- Use 1 past value (p=1)
+- Use 1 past error (q=1)
+
+SARIMA(p,d,q)(P,D,Q,s):
+Adds seasonal components
+s = seasonal period (12 for monthly data, etc.)
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Over-differencing</h4>
+  <p>Differencing removes trend and seasonality but can introduce artificial patterns. Check ACF/PACF plots carefully. Usually, first differencing is enough; rarely need more than 2.</p>
+</div>
+
+<p><strong>Exponential Smoothing:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Simple Exponential Smoothing (SES):
+ŷₜ₊₁ = αyₜ + (1-α)ŷₜ
+
+α = smoothing coefficient (0 &lt; α &lt; 1)
+High α: more weight to recent observations
+Low α: more weight to history
+
+Holt-Winters (with trend and seasonality):
+Combines level, trend, and seasonal components
+Can be additive or multiplicative
+</code></pre></div></div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: Forecasting in Practice</h4>
+  <p>Ensemble forecasting (combining multiple models) often outperforms single models. Use cross-validation for time series (don't mix future and past). In production, retrain models regularly as new data arrives.</p>
+</div>
+
+<div class="alert alert-note">
+  <h4>📌 Note: VAR Models</h4>
+  <p>Vector Autoregression (VAR) and VARMAX extend ARIMA to multivariate setting. Useful when forecasting multiple related time series simultaneously.</p>
+</div>
+
+<hr />
+
+<h3 id="module-6-gaussian-mixture-models--expectation-maximization">Module 6: Gaussian Mixture Models &amp; Expectation Maximization</h3>
+
+<h4 id="key-topics-5">Key Topics:</h4>
+<ul>
+  <li><strong>Gaussian Mixture Models (GMM)</strong>: Probabilistic clustering</li>
+  <li><strong>Expectation-Maximization (EM) Algorithm</strong>: Parameter estimation</li>
+  <li><strong>Soft vs Hard Clustering</strong>: Probabilistic assignments</li>
+  <li><strong>Model Selection</strong>: Choosing number of components</li>
+  <li><strong>Applications</strong>: Clustering, anomaly detection, density estimation</li>
+</ul>
+
+<div class="alert alert-note">
+  <h4>📌 Note: GMM as Probabilistic Alternative to K-Means</h4>
+  <p>While K-means assigns points to clusters (hard assignment), GMM assigns probabilities (soft assignment). This provides more flexibility and uncertainty quantification. GMM is also a generative model.</p>
+</div>
+
+<p><strong>Gaussian Mixture Model:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Assume data comes from mixture of k Gaussian distributions
+
+Model:
+p(x) = Σ πₖ × N(x|μₖ, Σₖ)
+
+where:
+- πₖ: mixing coefficient (sum to 1)
+- N(x|μₖ, Σₖ): Gaussian with mean μₖ and covariance Σₖ
+- k: component/cluster index
+
+Interpretation:
+Each data point has probability of belonging to each component
+Soft clustering (vs hard clustering in K-means)
+</code></pre></div></div>
+
+<div class="alert alert-success">
+  <h4>✅ Exam Tip: EM Algorithm Steps</h4>
+  <p>Know the EM algorithm: E-step computes responsibilities (probabilities), M-step updates parameters maximizing expected likelihood. Repeat until convergence. Understand both steps conceptually.</p>
+</div>
+
+<p><strong>Expectation-Maximization (EM) Algorithm:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Goal: Estimate parameters θ = {π, μ, Σ}
+
+E-Step (Expectation):
+Compute responsibility (posterior probability) of each component for each data point
+rₖₙ = (πₖ × N(xₙ|μₖ, Σₖ)) / Σⱼ(πⱼ × N(xₙ|μⱼ, Σⱼ))
+
+M-Step (Maximization):
+Update parameters using responsibilities as weights
+
+Nₖ = Σₙ rₖₙ (effective number of points in cluster k)
+
+πₖ^(new) = Nₖ / N
+
+μₖ^(new) = (1/Nₖ) × Σₙ rₖₙ × xₙ
+
+Σₖ^(new) = (1/Nₖ) × Σₙ rₖₙ × (xₙ - μₖ)(xₙ - μₖ)ᵀ
+
+Repeat E and M steps until convergence
+</code></pre></div></div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Warning: Local Optima</h4>
+  <p>EM can get stuck in local optima. Run multiple times with different initializations and choose best result. Use BIC or AIC to choose number of components.</p>
+</div>
+
+<p><strong>Model Selection for GMM:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Use Information Criteria:
+
+AIC = -2 log(L) + 2k  (k = number of parameters)
+
+BIC = -2 log(L) + k log(n)  (penalizes complexity more than AIC)
+
+Silhouette Score: For clustering quality
+
+Bayesian Model Comparison: Compare marginal likelihoods
+
+Lower AIC/BIC = better model
+
+Typical process:
+1. Try k = 1, 2, 3, ..., k_max
+2. Compute AIC/BIC for each
+3. Choose k with lowest score
+</code></pre></div></div>
+
+<div class="alert alert-danger">
+  <h4>🔴 Common Mistake: Singular Covariance</h4>
+  <p>If cluster has too few points, covariance becomes singular (non-invertible). Use regularization (add small diagonal term) or tie covariances. In software, use regularization parameter.</p>
+</div>
+
+<p><strong>Applications:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Clustering:
+- Soft clustering with uncertainty
+- Anomaly detection: points with low probability in all components
+
+Density Estimation:
+- Estimate probability distribution
+- Generate new samples from model
+
+Data Imputation:
+- Use model to fill missing values
+- More sophisticated than simple mean imputation
+</code></pre></div></div>
+
+<div class="alert alert-tip">
+  <h4>💡 Industry Tip: EM Beyond GMM</h4>
+  <p>EM algorithm extends beyond GMM! Used in Hidden Markov Models, missing data imputation, and many other problems. Understanding EM deeply enables solving complex estimation problems.</p>
+</div>
+
+<hr />
+
+<h2 id="-learning-outcomes">🎯 Learning Outcomes</h2>
+
+<p>By the end of this course, you should be able to:</p>
+
+<ul>
+  <li>✅ Understand and apply probability fundamentals and Bayes Theorem</li>
+  <li>✅ Select appropriate probability distributions for data</li>
+  <li>✅ Perform hypothesis testing and construct confidence intervals</li>
+  <li>✅ Analyze and forecast time series data</li>
+  <li>✅ Build regression models for prediction</li>
+  <li>✅ Apply Gaussian Mixture Models and EM algorithm</li>
+  <li>✅ Interpret statistical results and draw valid conclusions</li>
+</ul>
+
+<hr />
+
+<h2 id="-lab-work-schedule">📋 Lab Work Schedule</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lab</th>
+      <th>Objective</th>
+      <th>Topics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Lab 1</strong></td>
+      <td>Statistical Data Display &amp; Summary</td>
+      <td>Descriptive Statistics, Data Visualization</td>
+    </tr>
+    <tr>
+      <td><strong>Lab 2</strong></td>
+      <td>Bayes Theorem &amp; Naive Bayes</td>
+      <td>Conditional Probability, Classification</td>
+    </tr>
+    <tr>
+      <td><strong>Lab 3</strong></td>
+      <td>Probability Distributions &amp; Sampling</td>
+      <td>Distribution Fitting, Random Sampling</td>
+    </tr>
+    <tr>
+      <td><strong>Lab 4</strong></td>
+      <td>ANOVA Analysis</td>
+      <td>Hypothesis Testing, Multi-group Comparison</td>
+    </tr>
+    <tr>
+      <td><strong>Lab 5</strong></td>
+      <td>Regression Analysis</td>
+      <td>Linear Regression, Model Evaluation</td>
+    </tr>
+    <tr>
+      <td><strong>Lab 6</strong></td>
+      <td>Time Series Forecasting</td>
+      <td>AR, MA, ARIMA, SARIMA Models</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-exam-tips">⚡ Exam Tips</h2>
+
+<div class="alert alert-success">
+  <h4>✅ Mid-Semester Focus (Sessions 1-8)</h4>
+  <ul>
+    <li><strong>Probability Fundamentals</strong>: Axioms, conditional probability, Bayes</li>
+    <li><strong>Distributions</strong>: Properties, mean, variance, when to use each</li>
+    <li><strong>Central Limit Theorem</strong>: Why it's important, implications</li>
+    <li><strong>Sampling Distributions</strong>: How sample statistics vary</li>
+  </ul>
+</div>
+
+<div class="alert alert-success">
+  <h4>✅ Comprehensive Exam Focus (All Sessions)</h4>
+  <ul>
+    <li><strong>Hypothesis Testing Framework</strong>: Steps, p-values, errors (Type I, II)</li>
+    <li><strong>ANOVA</strong>: One-factor, two-factor, interpretation</li>
+    <li><strong>Time Series</strong>: Components, stationarity, ARIMA, forecasting</li>
+    <li><strong>GMM &amp; EM</strong>: Algorithm steps, model selection</li>
+    <li><strong>Integration</strong>: Apply multiple concepts to real problems</li>
+  </ul>
+</div>
+
+<div class="alert alert-warning">
+  <h4>⚠️ Common Exam Mistakes</h4>
+  <ul>
+    <li>Confusing independent and mutually exclusive events</li>
+    <li>Misinterpreting p-values and confidence intervals</li>
+    <li>Assuming normality without checking</li>
+    <li>Forgetting to check stationarity before time series modeling</li>
+    <li>Over-interpreting regression results (causation vs correlation)</li>
+    <li>Not checking assumptions of statistical tests</li>
+    <li>Base rate fallacy in Bayes' theorem applications</li>
+  </ul>
+</div>
+
+<hr />
+
+<h2 id="-industry-applications">💼 Industry Applications</h2>
+
+<h3 id="finance--risk-management">Finance &amp; Risk Management</h3>
+<p>Hypothesis testing for trading strategies, Monte Carlo simulations using distributions, time series forecasting for markets.</p>
+
+<h3 id="quality-control">Quality Control</h3>
+<p>ANOVA for process comparison, statistical process control using hypothesis tests.</p>
+
+<h3 id="marketing--ab-testing">Marketing &amp; A/B Testing</h3>
+<p>Hypothesis testing for campaign effectiveness, Bayesian methods for personalization, regression for demand estimation.</p>
+
+<h3 id="healthcare--pharmaceuticals">Healthcare &amp; Pharmaceuticals</h3>
+<p>Clinical trials use hypothesis testing, survival analysis uses time series concepts, mixture models for disease subtypes.</p>
+
+<h3 id="manufacturing--operations">Manufacturing &amp; Operations</h3>
+<p>Quality assurance through ANOVA, forecasting demand using ARIMA, GMM for anomaly detection.</p>
+
+<h3 id="data-science--ml">Data Science &amp; ML</h3>
+<p>Statistical validation of model results, confidence intervals for predictions, time series for forecasting, GMM for clustering.</p>
+
+<hr />
+
+<h2 id="-external-resources">🔗 External Resources</h2>
+
+<h3 id="textbooks">Textbooks</h3>
+<ul>
+  <li><strong>Statistics for Data Scientists</strong> - Maurits Kaptein et al, Springer 2022</li>
+  <li><strong>Probability and Statistics for Engineering</strong> - Jay L Devore, Cengage Learning</li>
+  <li><strong>Introduction to Time Series and Forecasting</strong> - Brockwell &amp; Davis, Springer</li>
+</ul>
+
+<h3 id="online-courses">Online Courses</h3>
+<ul>
+  <li><a href="https://online.stanford.edu/courses/sohs-ystatslearning-statistical-learning">Stanford StatLearning</a> - Free course</li>
+  <li><a href="https://www.coursera.org/specializations/statistics">Coursera Statistics with R</a></li>
+  <li><a href="https://ocw.mit.edu/search/?q=Statistics">MIT OpenCourseWare Statistics</a></li>
+</ul>
+
+<h3 id="tools--libraries">Tools &amp; Libraries</h3>
+<ul>
+  <li><strong>Python</strong>: StatsModels, SciPy, Scikit-learn, PyMC</li>
+  <li><strong>R</strong>: ggplot2, tidyverse, forecast, mixtools</li>
+  <li><strong>ARIMA</strong>: <code class="language-plaintext highlighter-rouge">statsmodels.tsa.arima</code>, <code class="language-plaintext highlighter-rouge">auto.arima</code> in R</li>
+  <li><strong>GMM</strong>: <code class="language-plaintext highlighter-rouge">sklearn.mixture.GaussianMixture</code>, <code class="language-plaintext highlighter-rouge">mclust</code> in R</li>
+</ul>
+
+<h3 id="important-papers--references">Important Papers &amp; References</h3>
+<ul>
+  <li><a href="https://arxiv.org/abs/1704.01745">Time Series Analysis - ARIMA Models</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm">Expectation-Maximization Algorithm</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Mixture_model">Gaussian Mixture Models</a></li>
+</ul>
+
+<h3 id="cheatsheets">Cheatsheets</h3>
+<ul>
+  <li><a href="https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e1190/1441352015658/probability_cheatsheet.pdf">Probability Cheatsheet</a></li>
+  <li><a href="https://www.scribd.com/doc/14524423/Selecting-the-Right-Statistical-Test">Statistical Tests Decision Tree</a></li>
+  <li><a href="https://www.kaggle.com/code/hrishikeshg/time-series-cheatsheet">Time Series Cheatsheet</a></li>
+</ul>
+
+<hr />
+
+<h2 id="-quick-reference---distribution-selection">📊 Quick Reference - Distribution Selection</h2>
+
+<p><strong>For Counting Problems:</strong></p>
+<ul>
+  <li>Bernoulli: Single trial, success/fail</li>
+  <li>Binomial: Fixed number of independent trials</li>
+  <li>Poisson: Count of events in fixed interval (rare events)</li>
+</ul>
+
+<p><strong>For Continuous Data:</strong></p>
+<ul>
+  <li>Normal: Symmetric, common (CLT)</li>
+  <li>t-distribution: When variance unknown, small samples</li>
+  <li>Chi-Square: For variance tests, goodness-of-fit</li>
+</ul>
+
+<p><strong>For Comparison Tests:</strong></p>
+<ul>
+  <li>Use t-test for means (if normal, or large n)</li>
+  <li>Use ANOVA for multiple groups</li>
+  <li>Use Mann-Whitney U for non-normal data</li>
+</ul>
+
+<hr />
+
+<h2 id="-need-help">📞 Need Help?</h2>
+
+<ul>
+  <li>Review lab materials and solutions</li>
+  <li>Practice with dataset examples</li>
+  <li>Work through past exam problems</li>
+  <li>Consult textbook references for deep concepts</li>
+  <li>Check the <a href="/semester_1_all_course/resources/">Resources page</a> for more materials</li>
+</ul>
+
+<p><strong>Last Updated</strong>: December 2025</p>
+
+</article>
+
+<style>
+  @media (max-width: 768px) {
+    .global-sidebar { display: none; }
+    .container > div { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  <div class="container">
+    <div>
+      <h3>📚 About This Site</h3>
+      <p>A comprehensive course platform designed for AI/ML students featuring detailed notes, exam tips, industry insights, and curated resources.</p>
+    </div>
+    <div>
+      <h3>📖 Quick Links</h3>
+      <ul>
+        <li><a href="/semester_1_all_course/">Home</a></li>
+        <li><a href="/semester_1_all_course/courses/">Courses</a></li>
+        <li><a href="/semester_1_all_course/resources/">Resources</a></li>
+        <li><a href="/semester_1_all_course/about/">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>🔗 External Resources</h3>
+      <ul>
+        <li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+        <li><a href="https://www.edx.org/" target="_blank">edX</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><a href="https://arxiv.org/" target="_blank">arXiv</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>💡 Repository</h3>
+      <p><a href="https://github.com/shivam2003-dev/semester_1_all_course" target="_blank">View on GitHub</a></p>
+      <p style="margin-top: 1em;"><a href="https://github.com/shivam2003-dev" target="_blank">@shivam2003-dev</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AIML Course Hub. All rights reserved. | Built with Jekyll & GitHub Pages</p>
+  </div>
+</footer>
+
+</body>
+</html>
