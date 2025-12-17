@@ -52,7 +52,7 @@ This is a **comprehensive course website** featuring:
       </div>
     </div>
     <div class="course-card-footer">
-      <a href="{{ course.url }}" class="btn" style="width: 100%; text-align: center;">View Course →</a>
+      <a href="{{ site.baseurl }}{{ course.url }}" class="btn" style="width: 100%; text-align: center;">View Course →</a>
     </div>
   </div>
   {% endfor %}
