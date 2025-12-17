@@ -1,0 +1,114 @@
+
+
+## Introduction to Statistical Methods (ISM) – Syllabus Overview
+
+### 1. Basics of Statistics & Probability
+
+* Measures of central tendency: mean, median, mode
+* Measures of variability: variance, standard deviation
+* Data symmetry, skewness, outliers, five-number summary
+* Basic probability concepts
+* Axioms of probability
+* Mutually exclusive and independent events
+
+
+
+---
+
+### 2. Conditional Probability & Bayes Theorem
+
+* Conditional probability
+* Total probability theorem
+* Independent events
+* Bayes theorem (with proof)
+* Introduction to Naïve Bayes classifier
+
+
+
+---
+
+### 3. Random Variables & Probability Distributions
+
+**Random Variables**
+
+* Discrete and continuous random variables
+* Joint distributions
+* Expectation, mean, variance, covariance
+* Transformation of random variables
+
+**Probability Distributions**
+
+* Bernoulli
+* Binomial
+* Poisson
+* Normal (Gaussian)
+* Introduction to t, F, and Chi-square distributions
+
+
+
+---
+
+### 4. Sampling & Hypothesis Testing
+
+* Random and stratified sampling
+* Sampling distributions
+* Central Limit Theorem (CLT)
+* Point and interval estimation
+* Confidence intervals
+* Hypothesis testing:
+
+  * Mean-based tests
+  * Proportion-based tests
+* Maximum Likelihood Estimation (MLE)
+* ANOVA:
+
+  * Single-factor
+  * Two-factor
+
+
+
+---
+
+### 5. Prediction & Forecasting
+
+**Correlation & Regression**
+
+* Correlation analysis
+* Simple linear regression
+* Model interpretation and diagnostics
+
+**Time Series Analysis**
+
+* Components of time series
+* Moving average and weighted moving average
+* AR model
+* ARMA, ARIMA
+* SARIMA, SARIMAX
+* VAR, VARMAX
+* Simple exponential smoothing
+
+
+
+---
+
+### 6. Gaussian Mixture Models & EM
+
+* Gaussian Mixture Models (GMM)
+* Expectation Maximization (EM) algorithm
+* Parameter estimation using EM
+
+
+
+---
+
+### 7. Practical & Lab Components
+
+* Statistical data visualization and summary
+* Bayes theorem and Naïve Bayes
+* Probability distributions and sampling
+* ANOVA implementation
+* Regression model analysis
+* Time series modeling
+
+
+

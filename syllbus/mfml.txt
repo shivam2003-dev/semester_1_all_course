@@ -1,0 +1,115 @@
+
+
+## Mathematical Foundations for ML / DS – Syllabus Overview
+
+### 1. Linear Systems & Matrices
+
+* Systems of linear equations
+* Matrix representation of linear systems
+* Methods for solving linear systems
+
+
+
+---
+
+### 2. Vector Spaces & Geometry
+
+* Linear independence, basis, rank
+* Affine spaces
+* Norms and inner products
+* Lengths, distances, angles
+* Orthogonality and orthonormal bases
+
+
+
+---
+
+### 3. Matrix Decomposition
+
+* Determinant and trace
+* Eigenvalues and eigenvectors
+* Cholesky decomposition
+* Eigen-decomposition and diagonalization
+* Singular Value Decomposition (SVD)
+* Matrix approximation
+
+
+
+---
+
+### 4. Vector & Multivariate Calculus
+
+* Differentiation of univariate functions
+* Partial derivatives and gradients
+* Gradients of vector-valued functions
+* Gradients of matrices
+* Useful gradient identities
+* Backpropagation and automatic differentiation
+* Higher-order derivatives
+* Multivariate Taylor series
+
+
+
+---
+
+### 5. Optimization Fundamentals
+
+* Gradient descent
+* Unconstrained optimization
+* Constrained optimization
+* Lagrange multipliers
+* Convex optimization
+
+
+
+---
+
+### 6. Nonlinear & Stochastic Optimization
+
+* Learning rate and initialization
+* Typical ML objective functions
+* Stochastic Gradient Descent (SGD)
+* Why ML optimization is different
+* Hyperparameter tuning
+* Feature preprocessing importance
+* Optimization challenges:
+
+  * Local optima
+  * Flat regions
+  * Cliffs and valleys
+  * Differential curvature
+* Advanced optimizers:
+
+  * Momentum
+  * AdaGrad
+  * RMSProp
+  * Adam
+
+
+
+---
+
+### 7. Dimensionality Reduction & PCA
+
+* Dimensionality reduction problem setup
+* Maximum variance perspective
+* Projection perspective
+* Eigenvector and low-rank approximation
+* PCA in high dimensions
+* Practical steps of PCA
+* Latent variable interpretation
+
+
+
+---
+
+### 8. Optimization for Support Vector Machines
+
+* Mathematical preliminaries for SVM
+* Karush–Kuhn–Tucker (KKT) conditions
+* Primal and dual formulations
+* Linear SVM optimization
+* Nonlinear SVM
+* Kernel methods
+
+

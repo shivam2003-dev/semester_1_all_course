@@ -1,0 +1,155 @@
+
+
+## Machine Learning – Syllabus Overview
+
+### 1. Introduction to Machine Learning
+
+* What is Machine Learning
+* Why ML matters and where it’s used
+* Types of ML: supervised, unsupervised, reinforcement
+* Designing a learning system
+* Key challenges in ML
+
+
+
+---
+
+### 2. Machine Learning Workflow
+
+* Role of data in ML
+* Data preprocessing and wrangling
+* Handling data skewness and sampling
+* Model training
+* Model testing and performance metrics
+
+
+
+---
+
+### 3. Linear Models for Regression
+
+* Direct (closed-form) solution
+* Gradient Descent:
+
+  * Batch
+  * Stochastic
+  * Mini-batch
+* Linear basis function models
+* Bias–variance decomposition
+
+
+
+---
+
+### 4. Linear Models for Classification
+
+* Discriminant functions
+* Decision theory
+* Probabilistic discriminative classifiers
+* Logistic regression:
+
+  * Log-loss function
+  * Gradient descent
+  * Multi-class classification
+
+
+
+---
+
+### 5. Decision Trees
+
+* Information theory
+* Entropy and information gain
+* Decision tree construction
+* Avoiding overfitting
+* Minimum Description Length (MDL)
+* Handling continuous and missing attributes
+
+
+
+---
+
+### 6. Instance-Based Learning
+
+* k-Nearest Neighbors (k-NN)
+* Locally Weighted Regression (LWR)
+* Radial Basis Function (RBF) networks
+
+
+
+---
+
+### 7. Support Vector Machines (SVM)
+
+* Linearly separable data
+* Non-linearly separable data
+* Kernel trick and Mercer’s theorem
+* Applications to structured and unstructured data
+
+
+
+---
+
+### 8. Bayesian Learning
+
+* Maximum Likelihood Estimation (MLE)
+* Maximum A Posteriori (MAP)
+* Bayes rule
+* Optimal Bayes classifier
+* Naïve Bayes classifier
+* Probabilistic generative classifiers
+* Bayesian linear regression
+
+
+
+---
+
+### 9. Ensemble Learning
+
+* Combining classifiers
+* Bagging
+* Random Forest
+* Boosting:
+
+  * AdaBoost
+  * Gradient Boosting
+  * XGBoost
+
+
+
+---
+
+### 10. Unsupervised Learning
+
+* K-means clustering and variants
+* Expectation–Maximization (EM) algorithm
+* Gaussian Mixture Model based soft clustering
+* Applications
+
+
+
+---
+
+### 11. Model Evaluation & Comparison
+
+* Comparing ML models
+* Model selection
+* Bias–variance considerations
+* Emerging concerns:
+
+  * Bias and fairness
+  * Interpretability of ML models
+
+
+
+---
+
+### 12. Lab & Practical Components
+
+* End-to-end ML pipeline
+* Linear regression and gradient descent
+* Logistic regression classifier
+* Decision tree and random forest
+* Naïve Bayes classification
+
+

@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<article class="course-detail">
+  <div class="breadcrumb">
+    <li><a href="{{ site.baseurl }}/">Home</a></li>
+    <li><a href="{{ site.baseurl }}/courses/">Courses</a></li>
+    <li>{{ page.title }}</li>
+  </div>
+
+  <div class="course-header" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white; padding: 2em; border-radius: 8px; margin-bottom: 2em;">
+    <h1 style="color: white; border: none; padding-bottom: 0; margin-bottom: 0.5em;">{{ page.title }}</h1>
+    <p style="margin: 0; opacity: 0.9; font-size: 1.1em;">{{ page.description }}</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 2.5fr 1fr; gap: 2em;">
+    <div class="main-content">
+      {{ content }}
+    </div>
+
+    <aside class="sidebar">
+      <h3>📖 Course Info</h3>
+      {% if page.credits %}
+      <p><strong>Credits:</strong> {{ page.credits }}</p>
+      {% endif %}
+      {% if page.instructor %}
+      <p><strong>Instructor:</strong> {{ page.instructor }}</p>
+      {% endif %}
+      {% if page.level %}
+      <p><strong>Level:</strong> {{ page.level }}</p>
+      {% endif %}
+
+      <h3>🎯 Quick Links</h3>
+      <ul>
+        <li><a href="#notes">📝 Notes</a></li>
+        <li><a href="#exam-tips">⚡ Exam Tips</a></li>
+        <li><a href="#resources">🔗 Resources</a></li>
+        <li><a href="#cheatsheet">📋 Cheatsheet</a></li>
+      </ul>
+
+      <h3>📊 Topics Covered</h3>
+      {% if page.topics %}
+      <ul>
+        {% for topic in page.topics %}
+        <li>{{ topic }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if page.github_repo %}
+      <p style="margin-top: 1.5em;">
+        <a href="{{ page.github_repo }}" class="btn" style="width: 100%; text-align: center; display: block;">🐙 GitHub Repository</a>
+      </p>
+      {% endif %}
+    </aside>
+  </div>
+</article>
+
+<style>
+  @media (max-width: 768px) {
+    [style*="grid-template-columns: 2.5fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
