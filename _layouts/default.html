@@ -12,10 +12,12 @@
   {% include header.html %}
   
   <main class="content-wrapper">
-    <div class="container" style="display: grid; grid-template-columns: 280px 1fr; gap: 2em; align-items: start;">
-      {% include sidebar.html %}
-      <div>
-        {{ content }}
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 2em; align-items: start;">
+        {% include sidebar.html %}
+        <div>
+          {{ content }}
+        </div>
       </div>
     </div>
   </main>
